@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaNegocio", "LogicaNegocio\LogicaNegocio.csproj", "{199BD7C0-4133-48C2-9C72-872F16C7127E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaElectoralEstudiantil", "SistemaElectoralEstudiantil\SistemaElectoralEstudiantil.csproj", "{F4E0FBFD-8DBC-4373-804B-D8B194471EB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{199BD7C0-4133-48C2-9C72-872F16C7127E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{199BD7C0-4133-48C2-9C72-872F16C7127E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{199BD7C0-4133-48C2-9C72-872F16C7127E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4E0FBFD-8DBC-4373-804B-D8B194471EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4E0FBFD-8DBC-4373-804B-D8B194471EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4E0FBFD-8DBC-4373-804B-D8B194471EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4E0FBFD-8DBC-4373-804B-D8B194471EB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{703ADEED-37F0-4C75-80E9-8B582C393E7D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{199BD7C0-4133-48C2-9C72-872F16C7127E} = {06DEFCBE-A17E-49D2-A637-2CFCEF7F7B10}
+		{F4E0FBFD-8DBC-4373-804B-D8B194471EB7} = {A72A50B1-FE9E-447F-A2FB-C7A126E487DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E427A8AF-5830-469A-B7C4-C93BE7785149}

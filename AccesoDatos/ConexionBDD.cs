@@ -10,6 +10,9 @@ namespace AccesoDatos
     public class ConexionBDD
     {
         private string CadenaConexion = "server=LAPTOP-PHTCMGVS\\SQLEXPRESS; database=SistemaVotacionEscolar; integrated security=true;";
+        //Servidor Naomy Amador: LAPTOP-9G07MQQC\SQLEXPRESS
+        //Servidor Arianna Cedeño: LAPTOP-PHTCMGVS\SQLEXPRESS
+        //Servidor Lía Torres: LILY\SQLEXPRESS
 
         public SqlConnection ObtenerConexion()
         {

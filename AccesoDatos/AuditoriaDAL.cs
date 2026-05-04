@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos
 {
-    internal class ValidarNombrePartido
+    internal class AuditoriaDAL
     {
     }
 }

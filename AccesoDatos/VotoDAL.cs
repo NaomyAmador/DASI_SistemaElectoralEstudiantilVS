@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades
+namespace AccesoDatos
 {
-    public class Roles
+    internal class VotoDAL
     {
-        public int RolID { get; set; }
-        public string NombreRol { get; set; }
     }
 }

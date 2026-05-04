@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Votacion
+    public class Votacion
     {
+        public int VotacionID { get; set; } 
+        public string NombreVotacion { get; set; } 
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin {  get; set; }
+        public bool Activa { get; set; } 
     }
 }

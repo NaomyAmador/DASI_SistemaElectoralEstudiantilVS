@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Sesion
+    public static class Sesion
     {
+        public static Usuarios UsuarioActual {  get; set; }
+        public static bool EsAdmin => UsuarioActual?.RolID == 1;
+        public static void CerrarSecion()
+        {
+            UsuarioActual = null;
+        }
     }
 }

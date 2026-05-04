@@ -16,7 +16,7 @@ namespace AccesoDatos
         {
             using(SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
-                string Consulta = @"SELECT COUNT (*) FROM Planchas WHERE NombrePlancha = @NombrePlancha";
+                string Consulta = "SELECT COUNT (*) FROM Planchas WHERE NombrePlancha = @NombrePlancha";
                 SqlCommand nombreplancha = new SqlCommand(Consulta, Conexion);
                 nombreplancha.Parameters.AddWithValue(@NombrePlancha, NombrePlancha);
                 return Convert.ToInt32(nombreplancha.ExecuteScalar()) > 0;
@@ -29,7 +29,7 @@ namespace AccesoDatos
             List<Planchas> Lista = new List <Planchas>();
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
-                string Consulta = @"SELECT PlanchaID, NombrePlancha, Logo, Descripcion, Activa WHERE Activa = 1";
+                string Consulta = "SELECT PlanchaID, NombrePlancha, Logo, Descripcion, Activa WHERE Activa = 1";
                 SqlCommand Planchas = new SqlCommand(Consulta,Conexion);
                 SqlDataReader reader = Planchas.ExecuteReader();
                 while (reader.Read())
@@ -51,7 +51,7 @@ namespace AccesoDatos
             List<Candidatos> Lista = new List<Candidatos>();
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
-                string Consulta = @"SELECT CandidatoID, PlanchaID, Nombre, Cargo, Edad, Descripcion FROM Candidatos WHERE PlanchaID = @PlanchaID";
+                string Consulta = "SELECT CandidatoID, PlanchaID, Nombre, Cargo, Edad, Descripcion FROM Candidatos WHERE PlanchaID = @PlanchaID";
                 SqlCommand id = new SqlCommand(Consulta, Conexion);
                 id.Parameters.AddWithValue("@PlanchaID", planchaID);
                 SqlDataReader reader = id.ExecuteReader();
@@ -77,7 +77,7 @@ namespace AccesoDatos
         {
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
-                string consulta = @"UPDATE Planchas SET Activa = 0 WHERE PlanchaID = @PlanchaID";
+                string consulta = "UPDATE Planchas SET Activa = 0 WHERE PlanchaID = @PlanchaID";
                 SqlCommand cmd = new SqlCommand(consulta, conexion);
                 cmd.Parameters.AddWithValue("@PlanchaID", planchaID);
                 return cmd.ExecuteNonQuery() > 0;

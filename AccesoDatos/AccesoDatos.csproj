@@ -153,7 +153,6 @@
     <Compile Include="ConexionBDD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OperacionesUsuario.cs" />
-    <Compile Include="VerDatosUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

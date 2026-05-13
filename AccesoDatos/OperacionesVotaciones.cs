@@ -79,7 +79,10 @@ namespace AccesoDatos
 
                         candidato.Cargo = dr["Cargo"].ToString();
 
-                        candidato.Edad = Convert.ToInt32(dr["Edad"]);
+                        if (dr["Edad"] != DBNull.Value)
+                        {
+                            candidato.Edad = Convert.ToInt32( dr["Edad"]);
+                        }
 
                         candidato.Descripcion = dr["Descripcion"].ToString();
 
@@ -91,24 +94,36 @@ namespace AccesoDatos
             }
         }
 
-        public bool VerificarSiUsuarioYaVoto( int usuarioID)
+        public bool VerificarSiUsuarioYaVoto(int usuarioID)
         {
-            using (SqlConnection cn = conexion.ObtenerConexion())
+            try
             {
+
+                using (SqlConnection cn = conexion.ObtenerConexion())
                 {
-                    SqlCommand cmd = new SqlCommand( "VerificarSiUsuarioYaVoto",cn);
+                    {
+                        SqlCommand cmd = new SqlCommand("VerificarSiUsuarioYaVoto", cn);
 
-                    cmd.CommandType =CommandType.StoredProcedure;
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue( "@UsuarioID",usuarioID);
+                        cmd.Parameters.AddWithValue("@UsuarioID", usuarioID);
 
+                        cn.Open();
 
-                    cn.Open();
+                        object resultado = cmd.ExecuteScalar();
 
-                    bool yaVoto =Convert.ToBoolean(cmd.ExecuteScalar());
+                        if (resultado != null && resultado != DBNull.Value)
+                        {
+                            return Convert.ToBoolean(resultado);
+                        }
 
-                    return yaVoto;
+                        return false;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error verificando voto", ex);
             }
         }
 
@@ -135,9 +150,14 @@ namespace AccesoDatos
                     }
                 }
             }
-            catch
+            catch (SqlException ex)
             {
-                return false;
+                if (ex.Number == 2627)
+                {
+                    throw new Exception("Este usuario ya votó.");
+                }
+
+                throw;
             }
         }
 
@@ -164,9 +184,9 @@ namespace AccesoDatos
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                throw ex;
             }
         }
 
@@ -208,8 +228,7 @@ namespace AccesoDatos
 
                     cn.Open();
 
-                    return Convert.ToInt32(
-                        cmd.ExecuteScalar());
+                    return Convert.ToInt32(cmd.ExecuteScalar());
                 }
             }
         }

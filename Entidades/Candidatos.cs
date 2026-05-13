@@ -16,7 +16,7 @@ namespace Entidades
 
         public string Cargo { get; set; }
 
-        public int Edad { get; set; }
+        public int? Edad { get; set; }
 
         public string Descripcion { get; set; }
 

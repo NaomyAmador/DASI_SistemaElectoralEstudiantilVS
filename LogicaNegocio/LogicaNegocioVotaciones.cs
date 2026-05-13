@@ -13,131 +13,93 @@ namespace LogicaNegocio
 
         public List<Planchas> ObtenerPlanchas()
         {
-            return operaciones
-                .MostrarPlanchas();
+            return operaciones.MostrarPlanchas();
         }
 
         public List<Candidatos>
-            ObtenerCandidatosPorPlancha(
-            int planchaID)
+            ObtenerCandidatosPorPlancha(int planchaID)
         {
 
             if (planchaID <= 0)
             {
-                throw new Exception(
-                    "La plancha no es valida");
+                throw new Exception("La plancha no es valida");
             }
 
-            return operaciones
-                .MostrarCandidatosPorPlancha(
-                    planchaID);
+            return operaciones.MostrarCandidatosPorPlancha(planchaID);
         }
 
 
-        public bool VerificarSiUsuarioYaVoto(
-            int usuarioID)
+        public bool VerificarSiUsuarioYaVoto(int usuarioID)
         {
 
             if (usuarioID <= 0)
             {
-                throw new Exception(
-                    "Usuario invalido");
+                throw new Exception("Usuario invalido");
             }
 
-            return operaciones
-                .VerificarSiUsuarioYaVoto(
-                    usuarioID);
+            return operaciones.VerificarSiUsuarioYaVoto(usuarioID);
         }
 
-        public bool RegistrarVotoPlancha(
-            int usuarioID,
-            int planchaID,
-            int votacionID)
+        public bool RegistrarVotoPlancha(int usuarioID,int planchaID,int votacionID)
         {
 
             if (usuarioID <= 0)
             {
-                throw new Exception(
-                    "Usuario invalido");
+                throw new Exception("Usuario invalido");
             }
 
             if (planchaID <= 0)
             {
-                throw new Exception(
-                    "Plancha invalida");
+                throw new Exception( "Plancha invalida");
             }
 
             if (votacionID <= 0)
             {
-                throw new Exception(
-                    "Votacion invalida");
+                throw new Exception("Votacion invalida");
             }
 
-            bool yaVoto =
-                operaciones
-                .VerificarSiUsuarioYaVoto(
-                    usuarioID);
+            bool yaVoto =operaciones.VerificarSiUsuarioYaVoto(usuarioID);
 
             if (yaVoto)
             {
-                throw new Exception(
-                    "El usuario ya voto");
+                throw new Exception("El usuario ya voto");
             }
 
-            return operaciones
-                .RegistrarVotoPlancha(
-                    usuarioID,
-                    planchaID,
-                    votacionID);
+            return operaciones.RegistrarVotoPlancha( usuarioID,planchaID,votacionID);
         }
 
-        public bool RegistrarVotoNulo(
-            int usuarioID,
-            int votacionID)
+        public bool RegistrarVotoNulo(int usuarioID,int votacionID)
         {
 
             if (usuarioID <= 0)
             {
-                throw new Exception(
-                    "Usuario invalido");
+                throw new Exception("Usuario invalido");
             }
 
             if (votacionID <= 0)
             {
-                throw new Exception(
-                    "Votacion invalida");
+                throw new Exception("Votacion invalida");
             }
 
-            bool yaVoto =
-                operaciones
-                .VerificarSiUsuarioYaVoto(
-                    usuarioID);
+            bool yaVoto =operaciones.VerificarSiUsuarioYaVoto(usuarioID);
 
             if (yaVoto)
             {
-                throw new Exception(
-                    "El usuario ya voto");
+                throw new Exception("El usuario ya voto");
             }
 
-            return operaciones
-                .RegistrarVotoNulo(
-                    usuarioID,
-                    votacionID);
+            return operaciones.RegistrarVotoNulo(usuarioID,votacionID);
         }
 
-        public DataTable VerResultados(
-            int votacionID)
+        public DataTable VerResultados(int votacionID)
         {
 
             if (votacionID <= 0)
             {
-                throw new Exception(
-                    "Votacion invalida");
+                throw new Exception("Votacion invalida");
             }
 
-            return operaciones
-                .VerResultadosVotacion(
-                    votacionID);
+            return operaciones.VerResultadosVotacion(votacionID);
         }
 
 
@@ -147,13 +109,10 @@ namespace LogicaNegocio
 
             if (votacionID <= 0)
             {
-                throw new Exception(
-                    "Votacion invalida");
+                throw new Exception("Votacion invalida");
             }
 
-            return operaciones
-                .ContarVotosNulos(
-                    votacionID);
+            return operaciones.ContarVotosNulos(votacionID);
         }
     }
 }

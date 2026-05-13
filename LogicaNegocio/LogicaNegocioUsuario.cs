@@ -1,14 +1,36 @@
 ﻿using AccesoDatos;
 using Entidades;
 using System;
+using System.Collections.Generic;
 
 namespace LogicaNegocio
 {
 
      public class LogicaNegocioUsuario
     {
-        OperacionesUsuario operaciones =
-            new OperacionesUsuario();
+        OperacionesUsuario operaciones = new OperacionesUsuario();
+
+        //Vista ADMIN Usuarios
+
+        public List<Usuarios> ListarUsuarios()
+        {
+            return operaciones.ListarUsuarios();
+        }
+
+        public List<Usuarios> BuscarUsuariosPorNombre(string nombre)
+        {
+
+            if (string.IsNullOrWhiteSpace(nombre))
+            {
+                throw new Exception("Debe ingresar un nombre");
+            }
+
+            return operaciones.BuscarUsuariosPorNombre(nombre);
+        }
+
+        //Usuaios Normales
+
+
         public bool RegistrarUsuario( string nombreCompleto, string usuario,string contraseña,string correo,
             string matricula, string curso, string seccion)
         {
@@ -67,7 +89,7 @@ namespace LogicaNegocio
                     "La seccion es obligatoria");
             }
 
-            return operaciones.RegistrarUsusario(nombreCompleto, usuario, contraseña,correo,matricula,curso, seccion);
+            return operaciones.RegistrarUsuario(nombreCompleto, usuario, contraseña,correo,matricula,curso, seccion);
         }
 
         public Usuarios Login(

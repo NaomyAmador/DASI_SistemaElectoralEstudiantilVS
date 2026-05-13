@@ -3,22 +3,114 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccesoDatos
 {
     public class OperacionesUsuario
     {
 
-        Usuarios User;
         ConexionBDD conexionBDD = new ConexionBDD();
+
+
+
+        /// Estas son para cuando lo ve un ADMIN
+
+        public List<Usuarios> ListarUsuarios()
+        {
+            List<Usuarios> lista =new List<Usuarios>();
+
+            using (SqlConnection conexion = conexionBDD.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand("ListarUsuarios", conexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                conexion.Open();
+
+                SqlDataReader dr =  cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Usuarios user = new Usuarios();
+
+                    user.UsuarioID =Convert.ToInt32( dr["UsuarioID"]);
+
+                    user.NombreCompleto = dr["NombreCompleto"].ToString();
+
+                    user.Usuario = dr["Usuario"].ToString();
+
+                    user.Correo = dr["Correo"].ToString();
+
+                    user.Matricula =dr["Matricula"].ToString();
+
+                    user.Curso = dr["Curso"].ToString();
+
+                    user.Seccion =dr["Seccion"].ToString();
+
+                    user.RolID = Convert.ToInt32( dr["RolID"]);
+
+                    user.Activo = Convert.ToBoolean( dr["Activo"]);
+
+                    lista.Add(user);
+                }
+            }
+
+            return lista;
+        }
+
+
+        public List<Usuarios> BuscarUsuariosPorNombre(string nombre)
+        {
+            List<Usuarios> lista =new List<Usuarios>();
+
+            using (SqlConnection conexion = conexionBDD.ObtenerConexion())
+            {
+                SqlCommand cmd =new SqlCommand("BuscarUsuariosPorNombre",conexion);
+
+                cmd.CommandType =CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Nombre",nombre);
+
+                conexion.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Usuarios user =new Usuarios();
+
+                    user.UsuarioID = Convert.ToInt32(dr["UsuarioID"]);
+
+                    user.NombreCompleto =dr["NombreCompleto"].ToString();
+
+                    user.Usuario = dr["Usuario"].ToString();
+
+                    user.Correo = dr["Correo"].ToString();
+
+                    user.Matricula = dr["Matricula"].ToString();
+
+                    user.Curso = dr["Curso"] .ToString();
+
+                    user.Seccion =dr["Seccion"].ToString();
+
+                    user.RolID = Convert.ToInt32(dr["RolID"]);
+
+                    user.Activo =Convert.ToBoolean(dr["Activo"]);
+
+                    lista.Add(user);
+                }
+            }
+
+            return lista;
+        }
+
+
+
+        //Esto es como lo veria un user normal
 
         public Usuarios VerUsuarios(string Usuario, string @Contraseña)
         {
-
+            Usuarios user = null;
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
                 SqlCommand cmd = new SqlCommand("MostrarDatosUsuario", conexion);
@@ -27,13 +119,15 @@ namespace AccesoDatos
                 cmd.Parameters.AddWithValue("@Usuario", Usuario);
                 cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
 
+                conexion.Open();
+
                 SqlDataReader dr = cmd.ExecuteReader();
 
+                
                 if (dr.Read())
 
                 {
-                    Usuarios User = new Usuarios()
-
+                    user = new Usuarios
                     {
                         UsuarioID = Convert.ToInt32(dr["UsuarioID"]),
                         NombreCompleto = dr["NombreCompleto"].ToString(),
@@ -46,40 +140,35 @@ namespace AccesoDatos
                     };
 
                 }
-                return User;
-
 
             }
-
+                return user;
         }
-        public bool RegistrarUsusario(string NombreCompleto, string Usuario, String Contraseña, string Correo, string Matricula, string Curso, string Seccion)
+        public bool RegistrarUsuario(string NombreCompleto, string Usuario, String Contraseña, string Correo, string Matricula, string Curso, string Seccion)
         {
-            using (SqlConnection conexion = conexionBDD.ObtenerConexion())
+            try
             {
-                SqlCommand command = new SqlCommand("RegistrarUsuario", conexion);
-
-                command.CommandType = CommandType.StoredProcedure;
-
-                command.Parameters.AddWithValue("@NombreCompleto", NombreCompleto);
-                command.Parameters.AddWithValue("@Usuario", Usuario);
-                command.Parameters.AddWithValue("@Contraseña", Contraseña);
-                command.Parameters.AddWithValue("@Correo", Correo);
-                command.Parameters.AddWithValue("@Matricula", Matricula);
-                command.Parameters.AddWithValue("@Curso", Curso);
-                command.Parameters.AddWithValue("@Seccion", Seccion);
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if ((reader.Read()))
+                using (SqlConnection conexion = conexionBDD.ObtenerConexion())
                 {
-                    return true;
+                    SqlCommand command = new SqlCommand("RegistrarUsuario", conexion);
+
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@NombreCompleto", NombreCompleto);
+                    command.Parameters.AddWithValue("@Usuario", Usuario);
+                    command.Parameters.AddWithValue("@Contraseña", Contraseña);
+                    command.Parameters.AddWithValue("@Correo", Correo);
+                    command.Parameters.AddWithValue("@Matricula", Matricula);
+                    command.Parameters.AddWithValue("@Curso", Curso);
+                    command.Parameters.AddWithValue("@Seccion", Seccion);
+
+                    return command.ExecuteNonQuery() > 0;
 
                 }
-
-                else
-                {
-                    return false;
-                }
+            }
+            catch
+            {
+                return false;
             }
 
         }
@@ -97,9 +186,10 @@ namespace AccesoDatos
 
                     command.Parameters.AddWithValue("@UsuarioID", ID);
 
-                    command.ExecuteNonQuery();
+                    conexion.Open();
 
-                    return true;
+                    return command.ExecuteNonQuery() > 0;
+                   
                 }
             }
 
@@ -120,16 +210,17 @@ namespace AccesoDatos
                     SqlCommand command = new SqlCommand("ActualizarUsuario", conexion);
 
                     command.CommandType = CommandType.StoredProcedure;
-
+                    command.Parameters.AddWithValue("@UsuarioID", usuario.UsuarioID);
                     command.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
                     command.Parameters.AddWithValue("@Correo", usuario.Correo);
                     command.Parameters.AddWithValue("@Matricula", usuario.Matricula);
                     command.Parameters.AddWithValue("@Curso", usuario.Curso);
                     command.Parameters.AddWithValue("@Seccion", usuario.Seccion);
 
-                    command.ExecuteNonQuery();
+                    conexion.Open();
+                    
+                    return command.ExecuteNonQuery() > 0;
 
-                    return true;
 
                 }
             }

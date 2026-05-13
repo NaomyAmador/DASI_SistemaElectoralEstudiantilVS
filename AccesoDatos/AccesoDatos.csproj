@@ -41,8 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCandidato.cs" />
+    <Compile Include="AddPlancha.cs" />
+    <Compile Include="AuditoriaDAL.cs" />
     <Compile Include="ConexionBDD.cs" />
+    <Compile Include="PlanchaDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioDAL.cs" />
+    <Compile Include="VotacionDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{e279aefb-f5ce-42b5-b5f7-212a2cedf0d5}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

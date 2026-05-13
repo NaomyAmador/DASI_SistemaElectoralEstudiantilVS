@@ -18,7 +18,7 @@ namespace AccesoDatos
             {
                 string Consulta = "SELECT COUNT (*) FROM Planchas WHERE NombrePlancha = @NombrePlancha";
                 SqlCommand nombreplancha = new SqlCommand(Consulta, Conexion);
-                nombreplancha.Parameters.AddWithValue(@NombrePlancha, NombrePlancha);
+                nombreplancha.Parameters.AddWithValue("@NombrePlancha", NombrePlancha);
                 return Convert.ToInt32(nombreplancha.ExecuteScalar()) > 0;
             }
             
@@ -29,7 +29,7 @@ namespace AccesoDatos
             List<Planchas> Lista = new List <Planchas>();
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
-                string Consulta = "SELECT PlanchaID, NombrePlancha, Logo, Descripcion, Activa WHERE Activa = 1";
+                string Consulta = "SELECT PlanchaID, NombrePlancha, Logo, Descripcion, Activa FROM Planchas WHERE Activa = 1";
                 SqlCommand Planchas = new SqlCommand(Consulta,Conexion);
                 SqlDataReader reader = Planchas.ExecuteReader();
                 while (reader.Read())

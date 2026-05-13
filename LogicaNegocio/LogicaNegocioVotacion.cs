@@ -25,7 +25,7 @@ namespace LogicaNegocio
     {
         private VotacionDAL votacionDAL = new VotacionDAL();
         private PlanchaDAL planchaDAL = new PlanchaDAL();
-        private VotoDAL votoDAL = new VotoDAL();
+       // private VotoDAL votoDAL = new VotoDAL();
         private AuditoriaDAL auditoria = new AuditoriaDAL();
 
         public (bool hayVotacion, EstadisticasVotacion stats, string mensaje) ObtenerEstadisticas()
@@ -85,11 +85,11 @@ namespace LogicaNegocio
             return $"Participación: {porc}%  |  Votaron: {votaron}  |  Padrón: {padron}";
         }
 
-        public string ObtenerEstadoUsuario(int usuarioID)
-        {
-            return votoDAL.UsuarioYaVoto(usuarioID)
-                ? "✓ Ya emitiste tu voto."
-                : "⚠ Aún no has votado.";
-        }
+        //public string ObtenerEstadoUsuario(int usuarioID)
+        //{
+        //    return votoDAL.UsuarioYaVoto(usuarioID)
+        //        ? "✓ Ya emitiste tu voto."
+        //        : "⚠ Aún no has votado.";
+        //}
     }
 }

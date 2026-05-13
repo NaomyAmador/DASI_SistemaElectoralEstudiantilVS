@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrearPlancha\CrearPlancha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearPlancha\CrearPlancha.Designer.cs">
+      <DependentUpon>CrearPlancha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MenuAdminYVotante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuAdminYVotante.Designer.cs">
+      <DependentUpon>MenuAdminYVotante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Votaciones\PanelVotaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Votaciones\PanelVotaciones.Designer.cs">
+      <DependentUpon>PanelVotaciones.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrearPlancha\CrearPlancha.resx">
+      <DependentUpon>CrearPlancha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MenuAdminYVotante.resx">
+      <DependentUpon>MenuAdminYVotante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

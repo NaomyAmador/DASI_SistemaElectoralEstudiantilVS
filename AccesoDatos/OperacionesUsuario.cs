@@ -111,7 +111,6 @@ namespace AccesoDatos
         }
 
 
-
         public bool ActualizarUsuario(Usuarios usuario)
         {
             try

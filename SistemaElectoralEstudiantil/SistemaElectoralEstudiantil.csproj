@@ -163,11 +163,11 @@
     <Compile Include="ADMINVerDatosTodosUsuario.Designer.cs">
       <DependentUpon>ADMINVerDatosTodosUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarUsuario.cs">
+    <Compile Include="VerDatosUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarUsuario.Designer.cs">
-      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    <Compile Include="VerDatosUser.Designer.cs">
+      <DependentUpon>VerDatosUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -183,14 +183,23 @@
     <Compile Include="RegistrarUsuario.Designer.cs">
       <DependentUpon>RegistrarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerDatosUsuario.cs">
+    <Compile Include="TempUserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VerDatosUsuario.Designer.cs">
-      <DependentUpon>VerDatosUsuario.cs</DependentUpon>
+    <Compile Include="TempUserLogin.Designer.cs">
+      <DependentUpon>TempUserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarDatos.Designer.cs">
+      <DependentUpon>EditarDatos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ADMINVerDatosTodosUsuario.resx">
       <DependentUpon>ADMINVerDatosTodosUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerDatosUser.resx">
+      <DependentUpon>VerDatosUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -203,6 +212,12 @@
     </Compile>
     <EmbeddedResource Include="RegistrarUsuario.resx">
       <DependentUpon>RegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempUserLogin.resx">
+      <DependentUpon>TempUserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarDatos.resx">
+      <DependentUpon>EditarDatos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -119,8 +119,7 @@ namespace AccesoDatos
                 cmd.Parameters.AddWithValue("@Usuario", Usuario);
                 cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
 
-                conexion.Open();
-
+               
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 
@@ -133,6 +132,7 @@ namespace AccesoDatos
                         NombreCompleto = dr["NombreCompleto"].ToString(),
                         Usuario = dr["Usuario"].ToString(),
                         Correo = dr["Correo"].ToString(),
+                        Matricula = dr["Matricula"].ToString(),
                         Curso = dr["Curso"].ToString(),
                         Seccion = dr["Seccion"].ToString(),
                         RolID = Convert.ToInt32(dr["RolID"])
@@ -212,6 +212,7 @@ namespace AccesoDatos
 
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@UsuarioID", usuario.UsuarioID);
+                    command.Parameters.AddWithValue( "@Usuario",usuario.Usuario);
                     command.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
                     command.Parameters.AddWithValue("@Correo", usuario.Correo);
                     command.Parameters.AddWithValue("@Matricula", usuario.Matricula);
@@ -234,68 +235,50 @@ namespace AccesoDatos
         }
 
 
-        public bool ConvertirUsuarioAdmin(
-    int usuarioID)
+        public bool ConvertirUsuarioAdmin(int usuarioID)
         {
             try
             {
-                using (SqlConnection conexion =
-                    conexionBDD.ObtenerConexion())
+                using (SqlConnection conexion =conexionBDD.ObtenerConexion())
                 {
-                    SqlCommand cmd =
-                        new SqlCommand(
-                            "ConvertirUsuarioAdmin",
-                            conexion);
+                    SqlCommand cmd = new SqlCommand( "ConvertirUsuarioAdmin",conexion);
 
-                    cmd.CommandType =
-                        CommandType.StoredProcedure;
+                    cmd.CommandType =CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue(
-                        "@UsuarioID",
-                        usuarioID);
+                    cmd.Parameters.AddWithValue("@UsuarioID",usuarioID);
 
-                    conexion.Open();
 
-                    return
-                        cmd.ExecuteNonQuery() > 0;
+                    return cmd.ExecuteNonQuery() > 0;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                throw new Exception( ex.Message);
             }
         }
 
 
-        public bool QuitarAdmin(
-    int usuarioID)
+        public bool QuitarAdmin(int usuarioID)
         {
             try
             {
                 using (SqlConnection conexion =
                     conexionBDD.ObtenerConexion())
                 {
-                    SqlCommand cmd =
-                        new SqlCommand(
-                            "QuitarAdmin",
-                            conexion);
+                    SqlCommand cmd = new SqlCommand( "QuitarAdmin", conexion);
 
-                    cmd.CommandType =
-                        CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue(
-                        "@UsuarioID",
-                        usuarioID);
+                    cmd.Parameters.AddWithValue("@UsuarioID",usuarioID);
 
-                    conexion.Open();
 
-                    return
-                        cmd.ExecuteNonQuery() > 0;
+                    return cmd.ExecuteNonQuery() > 0;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                throw new Exception(
+                    ex.Message);
             }
         }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaElectoralEstudiantil
 {
-    public partial class VerDatosUsuario : Form
+    public partial class EditarDatos : Form
     {
-        public VerDatosUsuario()
+        public EditarDatos()
         {
             InitializeComponent();
         }

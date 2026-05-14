@@ -82,13 +82,13 @@ namespace SistemaElectoralEstudiantil
 
                 bool resultado = false;
 
-                if (rol == "Administrador")
+                if (rol.Trim().ToLower() == "administrador")
                 {
-                    resultado = logica.ConvertirUsuarioAdmin( usuarioID);
+                    resultado =logica.ConvertirUsuarioAdmin(usuarioID);
                 }
                 else
                 {
-                    resultado = logica.QuitarAdmin(  usuarioID);
+                    resultado =logica.QuitarAdmin( usuarioID);
                 }
 
                 if (resultado)
@@ -102,6 +102,11 @@ namespace SistemaElectoralEstudiantil
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btn_Refrescar_Click(object sender, EventArgs e)
+        {
+            CargarUsuarios();
         }
     }
     

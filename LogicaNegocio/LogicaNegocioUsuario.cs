@@ -2,11 +2,12 @@
 using Entidades;
 using System;
 using System.Collections.Generic;
+using static System.Collections.Specialized.BitVector32;
 
 namespace LogicaNegocio
 {
 
-     public class LogicaNegocioUsuario
+    public class LogicaNegocioUsuario
     {
         OperacionesUsuario operaciones = new OperacionesUsuario();
 
@@ -31,7 +32,7 @@ namespace LogicaNegocio
         //Usuaios Normales
 
 
-        public bool RegistrarUsuario( string nombreCompleto, string usuario,string contraseña,string correo,
+        public bool RegistrarUsuario(string nombreCompleto, string usuario, string contraseña, string correo,
             string matricula, string curso, string seccion)
         {
 
@@ -89,7 +90,7 @@ namespace LogicaNegocio
                     "La seccion es obligatoria");
             }
 
-            return operaciones.RegistrarUsuario(nombreCompleto, usuario, contraseña,correo,matricula,curso, seccion);
+            return operaciones.RegistrarUsuario(nombreCompleto, usuario, contraseña, correo, matricula, curso, seccion);
         }
 
         public Usuarios Login(
@@ -109,7 +110,7 @@ namespace LogicaNegocio
                     "Ingrese la contraseña");
             }
 
-            Usuarios user = operaciones.VerUsuarios(usuario,contraseña);
+            Usuarios user = operaciones.VerUsuarios(usuario, contraseña);
 
             if (user == null)
             {
@@ -133,7 +134,7 @@ namespace LogicaNegocio
         }
 
 
-        public bool ActualizarUsuario( Usuarios usuario)
+        public bool ActualizarUsuario(Usuarios usuario)
         {
 
             if (usuario == null)
@@ -191,5 +192,22 @@ namespace LogicaNegocio
 
             return operaciones.ActualizarUsuario(usuario);
         }
+    
+    public bool ConvertirUsuarioAdmin(int usuarioID)
+
+        {
+          return operaciones.ConvertirUsuarioAdmin(usuarioID);
+        }
+
+        public bool QuitarAdmin( int usuarioID)
+        {
+                     return operaciones.QuitarAdmin( usuarioID);
+        }
+
+
+
     }
+
+
+
 }

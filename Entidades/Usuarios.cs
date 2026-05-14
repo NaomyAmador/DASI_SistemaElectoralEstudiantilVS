@@ -12,6 +12,8 @@ namespace Entidades
         public int UsuarioID {  get; set; }
         public string NombreCompleto { get; set; }
         public string Usuario {  get; set; }
+
+        [System.ComponentModel.Browsable(false)]
         public string PasswordHash { get; set; }
         public string Correo {  get; set; }
         public String Matricula { get; set; }

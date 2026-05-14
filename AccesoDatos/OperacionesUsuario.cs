@@ -21,12 +21,10 @@ namespace AccesoDatos
 
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
-                SqlCommand cmd = new SqlCommand("ListarUsuarios", conexion);
+                SqlCommand cmd = new SqlCommand("[MostrarTodosLosUsuarios]", conexion);
 
                 cmd.CommandType = CommandType.StoredProcedure;
-
-                conexion.Open();
-
+                              
                 SqlDataReader dr =  cmd.ExecuteReader();
 
                 while (dr.Read())
@@ -52,8 +50,11 @@ namespace AccesoDatos
                     user.Activo = Convert.ToBoolean( dr["Activo"]);
 
                     lista.Add(user);
+                    
                 }
+                
             }
+
 
             return lista;
         }
@@ -71,8 +72,7 @@ namespace AccesoDatos
 
                 cmd.Parameters.AddWithValue("@Nombre",nombre);
 
-                conexion.Open();
-
+               
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 while (dr.Read())
@@ -231,6 +231,73 @@ namespace AccesoDatos
 
          
         }
+
+
+        public bool ConvertirUsuarioAdmin(
+    int usuarioID)
+        {
+            try
+            {
+                using (SqlConnection conexion =
+                    conexionBDD.ObtenerConexion())
+                {
+                    SqlCommand cmd =
+                        new SqlCommand(
+                            "ConvertirUsuarioAdmin",
+                            conexion);
+
+                    cmd.CommandType =
+                        CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue(
+                        "@UsuarioID",
+                        usuarioID);
+
+                    conexion.Open();
+
+                    return
+                        cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+        public bool QuitarAdmin(
+    int usuarioID)
+        {
+            try
+            {
+                using (SqlConnection conexion =
+                    conexionBDD.ObtenerConexion())
+                {
+                    SqlCommand cmd =
+                        new SqlCommand(
+                            "QuitarAdmin",
+                            conexion);
+
+                    cmd.CommandType =
+                        CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue(
+                        "@UsuarioID",
+                        usuarioID);
+
+                    conexion.Open();
+
+                    return
+                        cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
 
     }
 }

@@ -41,8 +41,8 @@ namespace SistemaElectoralEstudiantil
 
                 if (user.RolID == 1)
                 {
-                    ADMINVerDatosTodosUsuario frm =
-                        new ADMINVerDatosTodosUsuario();
+                    FrmVotaciones frm =
+                        new FrmVotaciones();
 
                     frm.Show();
                 }

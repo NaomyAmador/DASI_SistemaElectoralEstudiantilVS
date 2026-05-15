@@ -20,9 +20,9 @@ namespace SistemaElectoralEstudiantil
             object sender,
             EventArgs e)
         {
-            VerificarSiYaVoto();
-
             CargarPlanchas();
+
+            VerificarSiYaVoto();
         }
 
         private void CargarPlanchas()
@@ -130,8 +130,7 @@ namespace SistemaElectoralEstudiantil
             lblDescripcion.TextAlign =
                 ContentAlignment.MiddleCenter;
 
-            Button btnVotar =
-                new Button();
+            Button btnVotar =new Button();
 
             btnVotar.Text = "Votar";
 
@@ -216,9 +215,9 @@ namespace SistemaElectoralEstudiantil
             }
             catch (Exception ex)
             {
-                // Usa ex.ToString() para ver la "InnerException" (el error real de SQL)
-                MessageBox.Show(ex.ToString());
-            }
+                MessageBox.Show(ex.Message);
+
+                          }
         }
 
         private void VerificarSiYaVoto()
@@ -258,10 +257,64 @@ namespace SistemaElectoralEstudiantil
                         if (item is Button)
                         {
                             item.Enabled = false;
+                            btnVotoNulo.Enabled = false;
                         }
                     }
                 }
             }
+        }
+
+        private void btnVotoNulo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult resultado =
+                    MessageBox.Show(
+                        "¿Desea registrar un voto nulo?",
+                        "Confirmar",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    LogicaNegocioVotaciones logica =
+                        new LogicaNegocioVotaciones();
+
+                    bool voto =
+                        logica.RegistrarVotoNulo(
+                            Sesion.UsuarioActual.UsuarioID,
+                            1);
+
+                    if (voto)
+                    {
+                        MessageBox.Show(
+                            "Voto nulo registrado");
+
+                        DeshabilitarBotonesVotar();
+
+                        btnVotoNulo.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                            "No se pudo registrar");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void flpPlanchas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

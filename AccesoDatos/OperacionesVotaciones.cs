@@ -139,6 +139,7 @@ namespace AccesoDatos
 
                         cmd.Parameters.AddWithValue( "@VotacionID", votacionID);
 
+
                         return
                             cmd.ExecuteNonQuery() > 0;
                     }

@@ -27,6 +27,10 @@ namespace SistemaElectoralEstudiantil.Principal
 
             //Configuración del Timer
             Tiempo_InicioSesión.Interval = 100;
+
+            //Label del ProgressBar
+            Lbl_ProgressBarTexto.Font = new Font("Century Gothic", 12, FontStyle.Bold);
+            Lbl_ProgressBarTexto.ForeColor = this.BackColor;
         }
 
         private void Btn_IniciarSesión_Click(object sender, EventArgs e)
@@ -36,6 +40,11 @@ namespace SistemaElectoralEstudiantil.Principal
                 UsuarioNegocio Lógica = new UsuarioNegocio();
                 User = Lógica.Login(TxtBox_Usuario.Text, TxtBox_Password.Text);
                 ProgressBar_InicioSesión.Value = 0;
+
+                //Volver al Label visible
+                Lbl_ProgressBarTexto.Text = "Iniciando Sesión...";
+                Lbl_ProgressBarTexto.ForeColor = Color.Peru;
+
                 Tiempo_InicioSesión.Start();
             }
             catch (Exception Errores)

@@ -28,12 +28,211 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TxtBox_Usuario = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtBox_Password = new System.Windows.Forms.TextBox();
+            this.Btn_IniciarSesión = new System.Windows.Forms.Button();
+            this.Btn_VerPassword = new System.Windows.Forms.Button();
+            this.Btn_NoVerPassword = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 141);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // TxtBox_Usuario
+            // 
+            this.TxtBox_Usuario.Location = new System.Drawing.Point(73, 204);
+            this.TxtBox_Usuario.Name = "TxtBox_Usuario";
+            this.TxtBox_Usuario.Size = new System.Drawing.Size(153, 22);
+            this.TxtBox_Usuario.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(170, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(170, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(170, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(171, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(171, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 16);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 167);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "label6";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(626, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(626, 206);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 16);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "label8";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(14, 206);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 20);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "label9";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(14, 253);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 20);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "label10";
+            // 
+            // TxtBox_Password
+            // 
+            this.TxtBox_Password.Location = new System.Drawing.Point(82, 253);
+            this.TxtBox_Password.Name = "TxtBox_Password";
+            this.TxtBox_Password.Size = new System.Drawing.Size(153, 22);
+            this.TxtBox_Password.TabIndex = 12;
+            // 
+            // Btn_IniciarSesión
+            // 
+            this.Btn_IniciarSesión.Location = new System.Drawing.Point(275, 324);
+            this.Btn_IniciarSesión.Name = "Btn_IniciarSesión";
+            this.Btn_IniciarSesión.Size = new System.Drawing.Size(131, 38);
+            this.Btn_IniciarSesión.TabIndex = 13;
+            this.Btn_IniciarSesión.Text = "button1";
+            this.Btn_IniciarSesión.UseVisualStyleBackColor = true;
+            // 
+            // Btn_VerPassword
+            // 
+            this.Btn_VerPassword.Location = new System.Drawing.Point(250, 253);
+            this.Btn_VerPassword.Name = "Btn_VerPassword";
+            this.Btn_VerPassword.Size = new System.Drawing.Size(32, 28);
+            this.Btn_VerPassword.TabIndex = 14;
+            this.Btn_VerPassword.Text = "button2";
+            this.Btn_VerPassword.UseVisualStyleBackColor = true;
+            // 
+            // Btn_NoVerPassword
+            // 
+            this.Btn_NoVerPassword.Location = new System.Drawing.Point(291, 253);
+            this.Btn_NoVerPassword.Name = "Btn_NoVerPassword";
+            this.Btn_NoVerPassword.Size = new System.Drawing.Size(32, 28);
+            this.Btn_NoVerPassword.TabIndex = 15;
+            this.Btn_NoVerPassword.Text = "button3";
+            this.Btn_NoVerPassword.UseVisualStyleBackColor = true;
+            // 
+            // FrmLogin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmLogin";
+            this.ClientSize = new System.Drawing.Size(682, 394);
+            this.Controls.Add(this.Btn_NoVerPassword);
+            this.Controls.Add(this.Btn_VerPassword);
+            this.Controls.Add(this.Btn_IniciarSesión);
+            this.Controls.Add(this.TxtBox_Password);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TxtBox_Usuario);
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "FrmLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox TxtBox_Usuario;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox TxtBox_Password;
+        private System.Windows.Forms.Button Btn_IniciarSesión;
+        private System.Windows.Forms.Button Btn_VerPassword;
+        private System.Windows.Forms.Button Btn_NoVerPassword;
     }
 }

@@ -16,16 +16,21 @@ namespace LogicaNegocio
             return operaciones.MostrarPlanchas();
         }
 
+       
         public List<Candidatos>
-            ObtenerCandidatosPorPlancha(int planchaID)
+    ObtenerCandidatosPorPlancha(
+        string nombrePlancha)
         {
-
-            if (planchaID <= 0)
+            if (string.IsNullOrWhiteSpace(
+                nombrePlancha))
             {
-                throw new Exception("La plancha no es valida");
+                throw new Exception(
+                    "Ingrese el nombre de la plancha");
             }
 
-            return operaciones.MostrarCandidatosPorPlancha(planchaID);
+            return operaciones
+                .MostrarCandidatosPorPlancha(
+                    nombrePlancha);
         }
 
 

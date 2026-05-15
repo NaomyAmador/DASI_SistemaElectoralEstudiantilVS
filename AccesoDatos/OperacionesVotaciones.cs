@@ -47,48 +47,62 @@ namespace AccesoDatos
         }
 
 
-        public List<Candidatos> MostrarCandidatosPorPlancha(int planchaID)
+        public List<Candidatos>
+    MostrarCandidatosPorPlancha(
+        string nombrePlancha)
         {
-            List<Candidatos> lista = new List<Candidatos>();
+            List<Candidatos> lista =
+                new List<Candidatos>();
 
-            using (SqlConnection cn = conexion.ObtenerConexion())
+            using (SqlConnection cn =
+                conexion.ObtenerConexion())
             {
+                SqlCommand cmd =
+                    new SqlCommand(
+                        "MostrarCandidatosPorPlancha",
+                        cn);
+
+                cmd.CommandType =
+                    CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue(
+                    "@NombrePlancha",
+                    nombrePlancha);
+
+ 
+                SqlDataReader dr =
+                    cmd.ExecuteReader();
+
+                while (dr.Read())
                 {
-                    SqlCommand cmd = new SqlCommand("MostrarCandidatosPorPlancha",cn);
+                    Candidatos candidato =
+                        new Candidatos();
 
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    candidato.CandidatoID =
+                        Convert.ToInt32(
+                            dr["CandidatoID"]);
 
-                    cmd.Parameters.AddWithValue("@PlanchaID", planchaID);
+                    candidato.NombrePlancha =
+                        dr["NombrePlancha"].ToString();
 
+                    candidato.Nombre =
+                        dr["Nombre"].ToString();
 
-                    cn.Open();
+                    candidato.Cargo =
+                        dr["Cargo"].ToString();
 
+                    candidato.Edad =
+                        Convert.ToInt32(
+                            dr["Edad"]);
 
-                    SqlDataReader dr = cmd.ExecuteReader();
+                    candidato.Descripcion =
+                        dr["Descripcion"].ToString();
 
-                    while (dr.Read())
-                    {
-                        Candidatos candidato = new Candidatos();
-
-                        candidato.CandidatoID = Convert.ToInt32( dr["CandidatoID"]);
-
-                        candidato.Nombre =  dr["Nombre"].ToString();
-
-                        candidato.Cargo = dr["Cargo"].ToString();
-
-                        if (dr["Edad"] != DBNull.Value)
-                        {
-                            candidato.Edad = Convert.ToInt32( dr["Edad"]);
-                        }
-
-                        candidato.Descripcion = dr["Descripcion"].ToString();
-
-                        lista.Add(candidato);
-                    }
+                    lista.Add(candidato);
                 }
-
-                return lista;
             }
+            
+            return lista;
         }
 
         public bool VerificarSiUsuarioYaVoto(int usuarioID)

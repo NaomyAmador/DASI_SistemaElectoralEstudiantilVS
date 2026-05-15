@@ -216,8 +216,7 @@ namespace SistemaElectoralEstudiantil
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
-                          }
+            }
         }
 
         private void VerificarSiYaVoto()

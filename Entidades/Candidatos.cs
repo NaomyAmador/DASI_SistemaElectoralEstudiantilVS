@@ -10,6 +10,8 @@ namespace Entidades
     {
         public int CandidatoID { get; set; }
 
+        public string NombrePlancha { get; set; }
+
         public int PlanchaID { get; set; }
 
         public string Nombre { get; set; }
@@ -20,7 +22,5 @@ namespace Entidades
 
         public string Descripcion { get; set; }
 
-
-
-    }
+          }
 }

@@ -14,7 +14,7 @@ namespace SistemaElectoralEstudiantil
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TempUserLogin());
+            Application.Run(new ReporteIntegrantesdelpartido());
         }
     }
 }

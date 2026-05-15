@@ -170,13 +170,6 @@ namespace LogicaNegocio
             }
 
             if (string.IsNullOrWhiteSpace(
-                usuario.Matricula))
-            {
-                throw new Exception(
-                    "Matricula obligatoria");
-            }
-
-            if (string.IsNullOrWhiteSpace(
                 usuario.Curso))
             {
                 throw new Exception(

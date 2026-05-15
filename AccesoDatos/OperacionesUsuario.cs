@@ -187,7 +187,7 @@ namespace AccesoDatos
 
                     command.Parameters.AddWithValue("@UsuarioID", ID);
 
-                    conexion.Open();
+                   
 
                     return command.ExecuteNonQuery() > 0;
                    
@@ -219,19 +219,19 @@ namespace AccesoDatos
                     command.Parameters.AddWithValue("@Curso", usuario.Curso);
                     command.Parameters.AddWithValue("@Seccion", usuario.Seccion);
 
-                    conexion.Open();
+                 
                     
                     return command.ExecuteNonQuery() > 0;
 
 
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                throw new Exception("Error en SQL: " + ex.Message);
             }
 
-         
+
         }
 
 

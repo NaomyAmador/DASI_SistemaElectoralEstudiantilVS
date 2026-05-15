@@ -91,5 +91,56 @@ namespace SistemaElectoralEstudiantil
                 this.Close();
             }
         }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                DialogResult resultado =
+                    MessageBox.Show(
+                        "¿Seguro que desea eliminar su cuenta?",
+                        "Eliminar Cuenta",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    LogicaNegocioUsuario logica =
+                        new LogicaNegocioUsuario();
+
+                    bool eliminado =
+                        logica.EliminarUsuario(
+                            Sesion.UsuarioActual
+                            .UsuarioID);
+
+                    if (eliminado)
+                    {
+                        MessageBox.Show(
+                            "Cuenta eliminada correctamente");
+
+                        Sesion.UsuarioActual =
+                            null;
+
+                        TempUserLogin frm =
+                            new TempUserLogin();
+
+                        frm.Show();
+
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                            "No se pudo eliminar la cuenta");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    ex.Message);
+            }
+        }
     }
 }

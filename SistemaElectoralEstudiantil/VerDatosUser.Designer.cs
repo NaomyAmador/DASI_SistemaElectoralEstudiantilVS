@@ -46,6 +46,7 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.Btn_Volver = new System.Windows.Forms.Button();
+            this.btnEliminarUsuario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -121,7 +122,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(255, 666);
+            this.button1.Location = new System.Drawing.Point(290, 666);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(284, 71);
             this.button1.TabIndex = 34;
@@ -212,7 +213,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button2.Location = new System.Drawing.Point(638, 666);
+            this.button2.Location = new System.Drawing.Point(602, 666);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(223, 71);
             this.button2.TabIndex = 35;
@@ -231,11 +232,25 @@
             this.Btn_Volver.Text = "Volver";
             this.Btn_Volver.UseVisualStyleBackColor = true;
             // 
+            // btnEliminarUsuario
+            // 
+            this.btnEliminarUsuario.BackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarUsuario.Font = new System.Drawing.Font("Modern No. 20", 10.125F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(905, 799);
+            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(284, 40);
+            this.btnEliminarUsuario.TabIndex = 37;
+            this.btnEliminarUsuario.Text = "Eliminar Usuario";
+            this.btnEliminarUsuario.UseVisualStyleBackColor = false;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
+            // 
             // VerDatosUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 860);
+            this.Controls.Add(this.btnEliminarUsuario);
             this.Controls.Add(this.Btn_Volver);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -282,5 +297,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Btn_Volver;
+        private System.Windows.Forms.Button btnEliminarUsuario;
     }
 }

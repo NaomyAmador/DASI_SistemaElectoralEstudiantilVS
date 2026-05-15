@@ -46,6 +46,5 @@ namespace AccesoDatos
             return User;
         }
 
-        }
     }
 }

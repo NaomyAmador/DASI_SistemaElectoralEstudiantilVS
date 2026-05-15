@@ -163,6 +163,12 @@
     <Compile Include="ADMINVerDatosTodosUsuario.Designer.cs">
       <DependentUpon>ADMINVerDatosTodosUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVotaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVotaciones.Designer.cs">
+      <DependentUpon>FrmVotaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerDatosUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </Compile>
     <EmbeddedResource Include="ADMINVerDatosTodosUsuario.resx">
       <DependentUpon>ADMINVerDatosTodosUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVotaciones.resx">
+      <DependentUpon>FrmVotaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerDatosUser.resx">
       <DependentUpon>VerDatosUser.cs</DependentUpon>

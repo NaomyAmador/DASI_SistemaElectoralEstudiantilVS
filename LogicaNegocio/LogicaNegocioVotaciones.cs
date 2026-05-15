@@ -40,32 +40,39 @@ namespace LogicaNegocio
             return operaciones.VerificarSiUsuarioYaVoto(usuarioID);
         }
 
-        public bool RegistrarVotoPlancha(int usuarioID,int planchaID,int votacionID)
+        public bool RegistrarVotoPlancha(int usuarioID, int planchaID, int votacionID)
         {
-
-            if (usuarioID <= 0)
+            try
             {
-                throw new Exception("Usuario invalido");
+                if (usuarioID <= 0)
+                {
+                    throw new Exception("Usuario invalido");
+                }
+
+                if (planchaID <= 0)
+                {
+                    throw new Exception("Plancha invalida");
+                }
+
+                if (votacionID <= 0)
+                {
+                    throw new Exception("Votacion invalida");
+                }
+
+                bool yaVoto = operaciones.VerificarSiUsuarioYaVoto(usuarioID);
+
+                if (yaVoto)
+                {
+                    throw new Exception("El usuario ya voto");
+                }
+
+                return operaciones.RegistrarVotoPlancha(usuarioID, planchaID, votacionID);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al registrar voto", ex);
             }
 
-            if (planchaID <= 0)
-            {
-                throw new Exception( "Plancha invalida");
-            }
-
-            if (votacionID <= 0)
-            {
-                throw new Exception("Votacion invalida");
-            }
-
-            bool yaVoto =operaciones.VerificarSiUsuarioYaVoto(usuarioID);
-
-            if (yaVoto)
-            {
-                throw new Exception("El usuario ya voto");
-            }
-
-            return operaciones.RegistrarVotoPlancha( usuarioID,planchaID,votacionID);
         }
 
         public bool RegistrarVotoNulo(int usuarioID,int votacionID)

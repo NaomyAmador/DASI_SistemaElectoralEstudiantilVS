@@ -48,8 +48,8 @@ namespace SistemaElectoralEstudiantil
                 }
                 else
                 {
-                    VerDatosUser frm =
-                    new VerDatosUser();
+                    FrmVotaciones frm =
+                    new FrmVotaciones();
                     frm.Show();
                 }
             }

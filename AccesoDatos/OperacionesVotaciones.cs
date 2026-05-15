@@ -22,9 +22,6 @@ namespace AccesoDatos
                 cmd.CommandType = CommandType.StoredProcedure;
 
 
-                cn.Open();
-
-
                 SqlDataReader dr =  cmd.ExecuteReader();
 
                 while (dr.Read())
@@ -108,8 +105,6 @@ namespace AccesoDatos
 
                         cmd.Parameters.AddWithValue("@UsuarioID", usuarioID);
 
-                        cn.Open();
-
                         object resultado = cmd.ExecuteScalar();
 
                         if (resultado != null && resultado != DBNull.Value)
@@ -144,7 +139,6 @@ namespace AccesoDatos
 
                         cmd.Parameters.AddWithValue( "@VotacionID", votacionID);
 
-                        cn.Open();
                         return
                             cmd.ExecuteNonQuery() > 0;
                     }
@@ -156,6 +150,7 @@ namespace AccesoDatos
                 {
                     throw new Exception("Este usuario ya votó.");
                 }
+
 
                 throw;
             }
@@ -176,8 +171,6 @@ namespace AccesoDatos
                         cmd.Parameters.AddWithValue( "@UsuarioID", usuarioID);
 
                         cmd.Parameters.AddWithValue("@VotacionID",votacionID);
-
-                        cn.Open();
 
                         return
                             cmd.ExecuteNonQuery() > 0;

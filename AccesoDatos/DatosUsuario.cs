@@ -25,6 +25,27 @@ namespace AccesoDatos
             //Variable vacía a utilizar más adelante
             LoginUsuario User = null;
 
+            if (LecturaDatos.Read())
+            {
+                //Objeto a usar: User
+                User = new LoginUsuario();
+
+                //Llenar datos mediante el Objeto
+                User.UsuarioID = Convert.ToInt32(LecturaDatos["UsuarioID"]);
+                User.NombreCompleto = LecturaDatos["NombreCompleto"].ToString();
+                User.UsuarioLogin = LecturaDatos["Usuario"].ToString();
+                User.Correo = LecturaDatos["Correo"].ToString();
+                User.Matricula = LecturaDatos["Matricula"].ToString();
+                User.Curso = LecturaDatos["Curso"].ToString();
+                User.Seccion = LecturaDatos["Seccion"].ToString();
+                User.RolID =Convert.ToInt32(LecturaDatos["RolID"]);
+            }
+
+            conexion.Close();
+
+            return User;
+        }
+
         }
     }
 }

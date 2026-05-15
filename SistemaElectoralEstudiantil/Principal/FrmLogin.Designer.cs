@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtBox_Usuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +45,9 @@
             this.Btn_IniciarSesión = new System.Windows.Forms.Button();
             this.Btn_VerPassword = new System.Windows.Forms.Button();
             this.Btn_NoVerPassword = new System.Windows.Forms.Button();
+            this.ProgressBar_InicioSesión = new System.Windows.Forms.ProgressBar();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Tiempo_InicioSesión = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +123,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(626, 182);
+            this.label7.Location = new System.Drawing.Point(599, 187);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 16);
             this.label7.TabIndex = 8;
@@ -128,7 +132,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(626, 206);
+            this.label8.Location = new System.Drawing.Point(599, 211);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 16);
             this.label8.TabIndex = 9;
@@ -163,12 +167,13 @@
             // 
             // Btn_IniciarSesión
             // 
-            this.Btn_IniciarSesión.Location = new System.Drawing.Point(275, 324);
+            this.Btn_IniciarSesión.Location = new System.Drawing.Point(266, 325);
             this.Btn_IniciarSesión.Name = "Btn_IniciarSesión";
             this.Btn_IniciarSesión.Size = new System.Drawing.Size(131, 38);
             this.Btn_IniciarSesión.TabIndex = 13;
             this.Btn_IniciarSesión.Text = "button1";
             this.Btn_IniciarSesión.UseVisualStyleBackColor = true;
+            this.Btn_IniciarSesión.Click += new System.EventHandler(this.Btn_IniciarSesión_Click);
             // 
             // Btn_VerPassword
             // 
@@ -188,11 +193,33 @@
             this.Btn_NoVerPassword.Text = "button3";
             this.Btn_NoVerPassword.UseVisualStyleBackColor = true;
             // 
+            // ProgressBar_InicioSesión
+            // 
+            this.ProgressBar_InicioSesión.Location = new System.Drawing.Point(18, 409);
+            this.ProgressBar_InicioSesión.Name = "ProgressBar_InicioSesión";
+            this.ProgressBar_InicioSesión.Size = new System.Drawing.Size(625, 30);
+            this.ProgressBar_InicioSesión.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(15, 381);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 16);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "label11";
+            // 
+            // Tiempo_InicioSesión
+            // 
+            this.Tiempo_InicioSesión.Tick += new System.EventHandler(this.Tiempo_InicioSesión_Tick);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 394);
+            this.ClientSize = new System.Drawing.Size(659, 460);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.ProgressBar_InicioSesión);
             this.Controls.Add(this.Btn_NoVerPassword);
             this.Controls.Add(this.Btn_VerPassword);
             this.Controls.Add(this.Btn_IniciarSesión);
@@ -234,5 +261,8 @@
         private System.Windows.Forms.Button Btn_IniciarSesión;
         private System.Windows.Forms.Button Btn_VerPassword;
         private System.Windows.Forms.Button Btn_NoVerPassword;
+        private System.Windows.Forms.ProgressBar ProgressBar_InicioSesión;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Timer Tiempo_InicioSesión;
     }
 }

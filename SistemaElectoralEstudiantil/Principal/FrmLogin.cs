@@ -48,5 +48,23 @@ namespace SistemaElectoralEstudiantil.Principal
         {
             
         }
+
+        private void Btn_VerPassword_Click(object sender, EventArgs e)
+        {
+            if (TxtBox_Password.PasswordChar == '*')
+            {
+                TxtBox_Password.PasswordChar = '\0';
+                Btn_NoVerPassword.BringToFront();
+            }
+        }
+
+        private void Btn_NoVerPassword_Click(object sender, EventArgs e)
+        {
+            if (TxtBox_Password.PasswordChar == '\0')
+            {
+                TxtBox_Password.PasswordChar = '*';
+                Btn_VerPassword.BringToFront();
+            }
+        }
     }
 }

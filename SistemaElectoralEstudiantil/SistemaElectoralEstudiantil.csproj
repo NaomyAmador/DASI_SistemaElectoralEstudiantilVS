@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatosPlancha\FrmDatosPlancha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosPlancha\FrmDatosPlancha.Designer.cs">
+      <DependentUpon>FrmDatosPlancha.cs</DependentUpon>
+    </Compile>
     <Compile Include="FolderPrueba\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DatosPlancha\FrmDatosPlancha.resx">
+      <DependentUpon>FrmDatosPlancha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FolderPrueba\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>

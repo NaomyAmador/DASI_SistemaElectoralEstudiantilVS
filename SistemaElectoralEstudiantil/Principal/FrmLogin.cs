@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using LogicaNegocio;
+using SistemaElectoralEstudiantil.FolderPrueba;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,7 @@ namespace SistemaElectoralEstudiantil.Principal
             Tiempo_InicioSesión.Interval = 100;
 
             //Label del ProgressBar
-            Lbl_ProgressBarTexto.Font = new Font("Century Gothic", 12, FontStyle.Bold);
+            Lbl_ProgressBarTexto.Font = new Font("Century Gothic", 10, FontStyle.Bold);
             Lbl_ProgressBarTexto.ForeColor = this.BackColor;
         }
 
@@ -55,7 +56,25 @@ namespace SistemaElectoralEstudiantil.Principal
 
         private void Tiempo_InicioSesión_Tick(object sender, EventArgs e)
         {
-            
+            ProgressBar_InicioSesión.PerformStep();
+            if (ProgressBar_InicioSesión.Value == 100)
+            {
+                Tiempo_InicioSesión.Stop();
+                this.Hide();
+
+                if (User.RolID == 1)
+                {
+                    //Llevar al FormAdmin
+                    FrmAdmin FormAdmin = new FrmAdmin();
+                    FormAdmin.Show();
+                }
+                else
+                {
+                    //Llevar al FormVotante
+                    FrmVotante FormVotante = new FrmVotante();
+                    FormVotante.Show();
+                }
+            }
         }
 
         private void Btn_VerPassword_Click(object sender, EventArgs e)

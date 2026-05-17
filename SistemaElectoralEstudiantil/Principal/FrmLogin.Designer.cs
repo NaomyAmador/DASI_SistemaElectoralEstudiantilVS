@@ -53,6 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             // 
             this.TxtBox_Usuario.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBox_Usuario.ForeColor = System.Drawing.Color.Gray;
-            this.TxtBox_Usuario.Location = new System.Drawing.Point(134, 207);
+            this.TxtBox_Usuario.Location = new System.Drawing.Point(144, 207);
             this.TxtBox_Usuario.Name = "TxtBox_Usuario";
             this.TxtBox_Usuario.Size = new System.Drawing.Size(174, 28);
             this.TxtBox_Usuario.TabIndex = 1;
@@ -215,7 +216,7 @@
             // 
             this.Btn_VerPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_VerPassword.BackgroundImage")));
             this.Btn_VerPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_VerPassword.Location = new System.Drawing.Point(355, 251);
+            this.Btn_VerPassword.Location = new System.Drawing.Point(355, 254);
             this.Btn_VerPassword.Name = "Btn_VerPassword";
             this.Btn_VerPassword.Size = new System.Drawing.Size(41, 32);
             this.Btn_VerPassword.TabIndex = 14;
@@ -226,7 +227,7 @@
             // 
             this.Btn_NoVerPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_NoVerPassword.BackgroundImage")));
             this.Btn_NoVerPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_NoVerPassword.Location = new System.Drawing.Point(397, 251);
+            this.Btn_NoVerPassword.Location = new System.Drawing.Point(397, 254);
             this.Btn_NoVerPassword.Name = "Btn_NoVerPassword";
             this.Btn_NoVerPassword.Size = new System.Drawing.Size(42, 32);
             this.Btn_NoVerPassword.TabIndex = 15;
@@ -235,7 +236,7 @@
             // 
             // ProgressBar_InicioSesión
             // 
-            this.ProgressBar_InicioSesión.Location = new System.Drawing.Point(18, 409);
+            this.ProgressBar_InicioSesión.Location = new System.Drawing.Point(15, 409);
             this.ProgressBar_InicioSesión.Name = "ProgressBar_InicioSesión";
             this.ProgressBar_InicioSesión.Size = new System.Drawing.Size(587, 30);
             this.ProgressBar_InicioSesión.TabIndex = 16;
@@ -270,7 +271,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Peru;
-            this.label2.Location = new System.Drawing.Point(449, 370);
+            this.label2.Location = new System.Drawing.Point(447, 370);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 27);
             this.label2.TabIndex = 19;
@@ -298,12 +299,24 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "◉";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkSalmon;
+            this.label5.Location = new System.Drawing.Point(262, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(189, 17);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏";
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(617, 460);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -358,5 +371,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

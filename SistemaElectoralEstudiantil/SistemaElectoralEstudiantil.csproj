@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FolderPrueba\FrmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FolderPrueba\FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FolderPrueba\FrmVotante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FolderPrueba\FrmVotante.Designer.cs">
+      <DependentUpon>FrmVotante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FolderPrueba\FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FolderPrueba\FrmVotante.resx">
+      <DependentUpon>FrmVotante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>

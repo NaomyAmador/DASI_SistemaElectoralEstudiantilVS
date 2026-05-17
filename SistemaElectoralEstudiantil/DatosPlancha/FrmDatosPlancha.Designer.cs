@@ -93,151 +93,186 @@
             // 
             // PicBox_CandidatoElegido
             // 
-            this.PicBox_CandidatoElegido.Location = new System.Drawing.Point(571, 110);
+            this.PicBox_CandidatoElegido.Location = new System.Drawing.Point(574, 118);
             this.PicBox_CandidatoElegido.Name = "PicBox_CandidatoElegido";
-            this.PicBox_CandidatoElegido.Size = new System.Drawing.Size(191, 165);
+            this.PicBox_CandidatoElegido.Size = new System.Drawing.Size(165, 152);
             this.PicBox_CandidatoElegido.TabIndex = 4;
             this.PicBox_CandidatoElegido.TabStop = false;
             // 
             // Lbl_Decoración1
             // 
             this.Lbl_Decoración1.AutoSize = true;
-            this.Lbl_Decoración1.Location = new System.Drawing.Point(559, 288);
+            this.Lbl_Decoración1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración1.ForeColor = System.Drawing.Color.Peru;
+            this.Lbl_Decoración1.Location = new System.Drawing.Point(545, 288);
             this.Lbl_Decoración1.Name = "Lbl_Decoración1";
-            this.Lbl_Decoración1.Size = new System.Drawing.Size(120, 16);
+            this.Lbl_Decoración1.Size = new System.Drawing.Size(81, 19);
             this.Lbl_Decoración1.TabIndex = 5;
-            this.Lbl_Decoración1.Text = "Nombre Completo:";
+            this.Lbl_Decoración1.Text = "Nombre:";
             // 
             // Lbl_Decoración2
             // 
             this.Lbl_Decoración2.AutoSize = true;
-            this.Lbl_Decoración2.Location = new System.Drawing.Point(559, 316);
+            this.Lbl_Decoración2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración2.ForeColor = System.Drawing.Color.Peru;
+            this.Lbl_Decoración2.Location = new System.Drawing.Point(545, 316);
             this.Lbl_Decoración2.Name = "Lbl_Decoración2";
-            this.Lbl_Decoración2.Size = new System.Drawing.Size(45, 16);
+            this.Lbl_Decoración2.Size = new System.Drawing.Size(61, 19);
             this.Lbl_Decoración2.TabIndex = 6;
             this.Lbl_Decoración2.Text = "Curso:";
             // 
             // Lbl_Decoración3
             // 
             this.Lbl_Decoración3.AutoSize = true;
-            this.Lbl_Decoración3.Location = new System.Drawing.Point(559, 345);
+            this.Lbl_Decoración3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración3.ForeColor = System.Drawing.Color.Peru;
+            this.Lbl_Decoración3.Location = new System.Drawing.Point(545, 345);
             this.Lbl_Decoración3.Name = "Lbl_Decoración3";
-            this.Lbl_Decoración3.Size = new System.Drawing.Size(72, 16);
+            this.Lbl_Decoración3.Size = new System.Drawing.Size(95, 19);
             this.Lbl_Decoración3.TabIndex = 7;
             this.Lbl_Decoración3.Text = "Propuesta:";
             // 
             // Lbl_Decoración4
             // 
             this.Lbl_Decoración4.AutoSize = true;
-            this.Lbl_Decoración4.Location = new System.Drawing.Point(559, 375);
+            this.Lbl_Decoración4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración4.ForeColor = System.Drawing.Color.Peru;
+            this.Lbl_Decoración4.Location = new System.Drawing.Point(545, 375);
             this.Lbl_Decoración4.Name = "Lbl_Decoración4";
-            this.Lbl_Decoración4.Size = new System.Drawing.Size(102, 16);
+            this.Lbl_Decoración4.Size = new System.Drawing.Size(132, 19);
             this.Lbl_Decoración4.TabIndex = 8;
             this.Lbl_Decoración4.Text = "Frase Personal:";
             // 
             // Lbl_Decoración5
             // 
             this.Lbl_Decoración5.AutoSize = true;
+            this.Lbl_Decoración5.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración5.ForeColor = System.Drawing.Color.Sienna;
             this.Lbl_Decoración5.Location = new System.Drawing.Point(70, 251);
             this.Lbl_Decoración5.Name = "Lbl_Decoración5";
-            this.Lbl_Decoración5.Size = new System.Drawing.Size(84, 16);
+            this.Lbl_Decoración5.Size = new System.Drawing.Size(89, 16);
             this.Lbl_Decoración5.TabIndex = 9;
             this.Lbl_Decoración5.Text = "Presidente/a";
             // 
             // Lbl_Decoración6
             // 
             this.Lbl_Decoración6.AutoSize = true;
+            this.Lbl_Decoración6.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración6.ForeColor = System.Drawing.Color.Sienna;
             this.Lbl_Decoración6.Location = new System.Drawing.Point(292, 251);
             this.Lbl_Decoración6.Name = "Lbl_Decoración6";
-            this.Lbl_Decoración6.Size = new System.Drawing.Size(110, 16);
+            this.Lbl_Decoración6.Size = new System.Drawing.Size(120, 16);
             this.Lbl_Decoración6.TabIndex = 10;
             this.Lbl_Decoración6.Text = "Vicepresidente/a";
             // 
             // Lbl_Decoración7
             // 
             this.Lbl_Decoración7.AutoSize = true;
+            this.Lbl_Decoración7.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración7.ForeColor = System.Drawing.Color.Sienna;
             this.Lbl_Decoración7.Location = new System.Drawing.Point(68, 460);
             this.Lbl_Decoración7.Name = "Lbl_Decoración7";
-            this.Lbl_Decoración7.Size = new System.Drawing.Size(81, 16);
+            this.Lbl_Decoración7.Size = new System.Drawing.Size(88, 16);
             this.Lbl_Decoración7.TabIndex = 11;
             this.Lbl_Decoración7.Text = "Secretario/a";
             // 
             // Lbl_Decoración8
             // 
             this.Lbl_Decoración8.AutoSize = true;
+            this.Lbl_Decoración8.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración8.ForeColor = System.Drawing.Color.Sienna;
             this.Lbl_Decoración8.Location = new System.Drawing.Point(309, 460);
             this.Lbl_Decoración8.Name = "Lbl_Decoración8";
-            this.Lbl_Decoración8.Size = new System.Drawing.Size(75, 16);
+            this.Lbl_Decoración8.Size = new System.Drawing.Size(76, 16);
             this.Lbl_Decoración8.TabIndex = 12;
             this.Lbl_Decoración8.Text = "Tesorero/a";
             // 
             // Btn_Votar
             // 
-            this.Btn_Votar.Location = new System.Drawing.Point(610, 427);
+            this.Btn_Votar.BackColor = System.Drawing.Color.Peru;
+            this.Btn_Votar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Votar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Votar.Location = new System.Drawing.Point(591, 423);
             this.Btn_Votar.Name = "Btn_Votar";
-            this.Btn_Votar.Size = new System.Drawing.Size(115, 30);
+            this.Btn_Votar.Size = new System.Drawing.Size(135, 30);
             this.Btn_Votar.TabIndex = 13;
             this.Btn_Votar.Text = "Votar";
-            this.Btn_Votar.UseVisualStyleBackColor = true;
+            this.Btn_Votar.UseVisualStyleBackColor = false;
             // 
             // Btn_InfoTesorero
             // 
-            this.Btn_InfoTesorero.Location = new System.Drawing.Point(265, 482);
+            this.Btn_InfoTesorero.BackColor = System.Drawing.Color.Chocolate;
+            this.Btn_InfoTesorero.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_InfoTesorero.ForeColor = System.Drawing.Color.White;
+            this.Btn_InfoTesorero.Location = new System.Drawing.Point(265, 481);
             this.Btn_InfoTesorero.Name = "Btn_InfoTesorero";
             this.Btn_InfoTesorero.Size = new System.Drawing.Size(161, 30);
             this.Btn_InfoTesorero.TabIndex = 14;
             this.Btn_InfoTesorero.Text = "Ver Información";
-            this.Btn_InfoTesorero.UseVisualStyleBackColor = true;
+            this.Btn_InfoTesorero.UseVisualStyleBackColor = false;
             // 
             // Btn_InfoVicepresidente
             // 
-            this.Btn_InfoVicepresidente.Location = new System.Drawing.Point(265, 274);
+            this.Btn_InfoVicepresidente.BackColor = System.Drawing.Color.Chocolate;
+            this.Btn_InfoVicepresidente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_InfoVicepresidente.ForeColor = System.Drawing.Color.White;
+            this.Btn_InfoVicepresidente.Location = new System.Drawing.Point(265, 273);
             this.Btn_InfoVicepresidente.Name = "Btn_InfoVicepresidente";
             this.Btn_InfoVicepresidente.Size = new System.Drawing.Size(161, 30);
             this.Btn_InfoVicepresidente.TabIndex = 15;
             this.Btn_InfoVicepresidente.Text = "Ver Información";
-            this.Btn_InfoVicepresidente.UseVisualStyleBackColor = true;
+            this.Btn_InfoVicepresidente.UseVisualStyleBackColor = false;
             // 
             // Btn_InfoPresidente
             // 
-            this.Btn_InfoPresidente.Location = new System.Drawing.Point(30, 273);
+            this.Btn_InfoPresidente.BackColor = System.Drawing.Color.Chocolate;
+            this.Btn_InfoPresidente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_InfoPresidente.ForeColor = System.Drawing.Color.White;
+            this.Btn_InfoPresidente.Location = new System.Drawing.Point(30, 272);
             this.Btn_InfoPresidente.Name = "Btn_InfoPresidente";
             this.Btn_InfoPresidente.Size = new System.Drawing.Size(161, 30);
             this.Btn_InfoPresidente.TabIndex = 16;
             this.Btn_InfoPresidente.Text = "Ver Información";
-            this.Btn_InfoPresidente.UseVisualStyleBackColor = true;
+            this.Btn_InfoPresidente.UseVisualStyleBackColor = false;
             // 
             // Btn_InfoSecretario
             // 
-            this.Btn_InfoSecretario.Location = new System.Drawing.Point(30, 483);
+            this.Btn_InfoSecretario.BackColor = System.Drawing.Color.Chocolate;
+            this.Btn_InfoSecretario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_InfoSecretario.ForeColor = System.Drawing.Color.White;
+            this.Btn_InfoSecretario.Location = new System.Drawing.Point(30, 482);
             this.Btn_InfoSecretario.Name = "Btn_InfoSecretario";
             this.Btn_InfoSecretario.Size = new System.Drawing.Size(161, 30);
             this.Btn_InfoSecretario.TabIndex = 17;
             this.Btn_InfoSecretario.Text = "Ver Información";
-            this.Btn_InfoSecretario.UseVisualStyleBackColor = true;
+            this.Btn_InfoSecretario.UseVisualStyleBackColor = false;
             // 
             // Lbl_Decoración9
             // 
             this.Lbl_Decoración9.AutoSize = true;
-            this.Lbl_Decoración9.Location = new System.Drawing.Point(353, 23);
+            this.Lbl_Decoración9.Font = new System.Drawing.Font("Papillion PERSONAL USE ONLY", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración9.ForeColor = System.Drawing.Color.Chocolate;
+            this.Lbl_Decoración9.Location = new System.Drawing.Point(22, 5);
             this.Lbl_Decoración9.Name = "Lbl_Decoración9";
-            this.Lbl_Decoración9.Size = new System.Drawing.Size(114, 16);
+            this.Lbl_Decoración9.Size = new System.Drawing.Size(741, 86);
             this.Lbl_Decoración9.TabIndex = 18;
-            this.Lbl_Decoración9.Text = "Datos de Plancha";
+            this.Lbl_Decoración9.Text = "✰•······················•✰ Datos de Plancha ✰•······················•✰";
             // 
             // Lbl_Decoración10
             // 
             this.Lbl_Decoración10.AutoSize = true;
-            this.Lbl_Decoración10.Location = new System.Drawing.Point(237, 49);
+            this.Lbl_Decoración10.Font = new System.Drawing.Font("Century Gothic", 6F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración10.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.Lbl_Decoración10.Location = new System.Drawing.Point(247, 71);
             this.Lbl_Decoración10.Name = "Lbl_Decoración10";
-            this.Lbl_Decoración10.Size = new System.Drawing.Size(330, 16);
+            this.Lbl_Decoración10.Size = new System.Drawing.Size(285, 15);
             this.Lbl_Decoración10.TabIndex = 19;
             this.Lbl_Decoración10.Text = "¡Conoce a los candidatos que cambiarán la institución!";
             // 
             // Lbl_Nombre
             // 
             this.Lbl_Nombre.AutoSize = true;
-            this.Lbl_Nombre.Location = new System.Drawing.Point(686, 288);
+            this.Lbl_Nombre.Location = new System.Drawing.Point(631, 290);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
             this.Lbl_Nombre.Size = new System.Drawing.Size(44, 16);
             this.Lbl_Nombre.TabIndex = 20;
@@ -246,7 +281,7 @@
             // Lbl_Curso
             // 
             this.Lbl_Curso.AutoSize = true;
-            this.Lbl_Curso.Location = new System.Drawing.Point(607, 316);
+            this.Lbl_Curso.Location = new System.Drawing.Point(610, 318);
             this.Lbl_Curso.Name = "Lbl_Curso";
             this.Lbl_Curso.Size = new System.Drawing.Size(44, 16);
             this.Lbl_Curso.TabIndex = 21;
@@ -255,7 +290,7 @@
             // Lbl_Propuesta
             // 
             this.Lbl_Propuesta.AutoSize = true;
-            this.Lbl_Propuesta.Location = new System.Drawing.Point(632, 345);
+            this.Lbl_Propuesta.Location = new System.Drawing.Point(641, 347);
             this.Lbl_Propuesta.Name = "Lbl_Propuesta";
             this.Lbl_Propuesta.Size = new System.Drawing.Size(44, 16);
             this.Lbl_Propuesta.TabIndex = 22;
@@ -264,7 +299,7 @@
             // Lbl_Frase
             // 
             this.Lbl_Frase.AutoSize = true;
-            this.Lbl_Frase.Location = new System.Drawing.Point(662, 375);
+            this.Lbl_Frase.Location = new System.Drawing.Point(674, 377);
             this.Lbl_Frase.Name = "Lbl_Frase";
             this.Lbl_Frase.Size = new System.Drawing.Size(44, 16);
             this.Lbl_Frase.TabIndex = 23;
@@ -274,7 +309,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 553);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.ClientSize = new System.Drawing.Size(808, 531);
             this.Controls.Add(this.Lbl_Frase);
             this.Controls.Add(this.Lbl_Propuesta);
             this.Controls.Add(this.Lbl_Curso);

@@ -60,6 +60,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -210,7 +212,7 @@
             this.Btn_Votar.BackColor = System.Drawing.Color.Peru;
             this.Btn_Votar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Votar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Votar.Location = new System.Drawing.Point(488, 420);
+            this.Btn_Votar.Location = new System.Drawing.Point(492, 417);
             this.Btn_Votar.Name = "Btn_Votar";
             this.Btn_Votar.Size = new System.Drawing.Size(146, 40);
             this.Btn_Votar.TabIndex = 13;
@@ -298,7 +300,7 @@
             this.Lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Nombre.Location = new System.Drawing.Point(518, 294);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
-            this.Lbl_Nombre.Size = new System.Drawing.Size(171, 17);
+            this.Lbl_Nombre.Size = new System.Drawing.Size(158, 17);
             this.Lbl_Nombre.TabIndex = 20;
             this.Lbl_Nombre.Text = "Candidato a Seleccionar";
             // 
@@ -308,7 +310,7 @@
             this.Lbl_Curso.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Curso.Location = new System.Drawing.Point(496, 322);
             this.Lbl_Curso.Name = "Lbl_Curso";
-            this.Lbl_Curso.Size = new System.Drawing.Size(171, 17);
+            this.Lbl_Curso.Size = new System.Drawing.Size(158, 17);
             this.Lbl_Curso.TabIndex = 21;
             this.Lbl_Curso.Text = "Candidato a Seleccionar";
             // 
@@ -318,7 +320,7 @@
             this.Lbl_Propuesta.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Propuesta.Location = new System.Drawing.Point(532, 351);
             this.Lbl_Propuesta.Name = "Lbl_Propuesta";
-            this.Lbl_Propuesta.Size = new System.Drawing.Size(171, 17);
+            this.Lbl_Propuesta.Size = new System.Drawing.Size(158, 17);
             this.Lbl_Propuesta.TabIndex = 22;
             this.Lbl_Propuesta.Text = "Candidato a Seleccionar";
             // 
@@ -328,7 +330,7 @@
             this.Lbl_Frase.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Frase.Location = new System.Drawing.Point(569, 381);
             this.Lbl_Frase.Name = "Lbl_Frase";
-            this.Lbl_Frase.Size = new System.Drawing.Size(171, 17);
+            this.Lbl_Frase.Size = new System.Drawing.Size(158, 17);
             this.Lbl_Frase.TabIndex = 23;
             this.Lbl_Frase.Text = "Candidato a Seleccionar";
             // 
@@ -373,7 +375,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Chocolate;
-            this.label4.Location = new System.Drawing.Point(477, 465);
+            this.label4.Location = new System.Drawing.Point(482, 461);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 36);
             this.label4.TabIndex = 27;
@@ -415,12 +417,40 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "✍︎";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Chocolate;
+            this.label8.Location = new System.Drawing.Point(453, 418);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 36);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "◉";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Chocolate;
+            this.label9.Location = new System.Drawing.Point(642, 418);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 36);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "◉";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // FrmDatosPlancha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(745, 517);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -498,5 +528,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

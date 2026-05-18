@@ -27,7 +27,13 @@ namespace LogicaNegocio
         private PlanchaDAL planchaDAL = new PlanchaDAL();
        // private VotoDAL votoDAL = new VotoDAL();
         private AuditoriaDAL auditoria = new AuditoriaDAL();
+        private UsuarioDAL usuarioDAL = new UsuarioDAL();
 
+        public Usuarios ObtenerUsuarioPorID(int usuarioID)
+        {
+            // Aquí puedes agregar validaciones de negocio si las necesitas más adelante
+            return usuarioDAL.ObtenerUsuarioPorID(usuarioID);
+        }
         public (bool hayVotacion, EstadisticasVotacion stats, string mensaje) ObtenerEstadisticas()
         {
             Votacion v = votacionDAL.ObtenerVotacionActiva();

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,8 +57,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbl_VotosEmitidos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_ActualizarDatos = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_ActualizarDatos = new System.Windows.Forms.Button();
             this.tm_Actualizar = new System.Windows.Forms.Timer(this.components);
             this.lbl_TiempoRes = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -113,54 +113,54 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 343F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1300, 323);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // chart_Barras
             // 
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisY.MajorGrid.Enabled = false;
-            chartArea3.Name = "ChartArea1";
-            this.chart_Barras.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisY.MajorGrid.Enabled = false;
+            chartArea1.Name = "ChartArea1";
+            this.chart_Barras.ChartAreas.Add(chartArea1);
             this.chart_Barras.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend3.Name = "Legend1";
-            this.chart_Barras.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chart_Barras.Legends.Add(legend1);
             this.chart_Barras.Location = new System.Drawing.Point(653, 3);
             this.chart_Barras.Name = "chart_Barras";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart_Barras.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart_Barras.Series.Add(series1);
             this.chart_Barras.Size = new System.Drawing.Size(644, 317);
             this.chart_Barras.TabIndex = 1;
             this.chart_Barras.Text = "chart2";
-            title3.Name = "Title1";
-            title3.Text = "Votos Válidos por Plancha";
-            this.chart_Barras.Titles.Add(title3);
+            title1.Name = "Title1";
+            title1.Text = "Votos Válidos por Plancha";
+            this.chart_Barras.Titles.Add(title1);
             // 
             // chart_Pastel
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart_Pastel.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chart_Pastel.ChartAreas.Add(chartArea2);
             this.chart_Pastel.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chart_Pastel.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.chart_Pastel.Legends.Add(legend2);
             this.chart_Pastel.Location = new System.Drawing.Point(3, 3);
             this.chart_Pastel.Name = "chart_Pastel";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.CustomProperties = "PieLabelStyle=Outside";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart_Pastel.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.CustomProperties = "PieLabelStyle=Outside";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart_Pastel.Series.Add(series2);
             this.chart_Pastel.Size = new System.Drawing.Size(644, 317);
             this.chart_Pastel.TabIndex = 0;
             this.chart_Pastel.Text = "chart1";
-            title4.Name = "Title1";
-            title4.Text = "% Votos por Plancha (Nulos Excluidos)";
-            this.chart_Pastel.Titles.Add(title4);
+            title2.Name = "Title1";
+            title2.Text = "% Votos por Plancha (Nulos Excluidos)";
+            this.chart_Pastel.Titles.Add(title2);
             // 
             // tableLayoutPanel2
             // 
@@ -326,18 +326,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Votos Emitidos";
             // 
-            // btn_ActualizarDatos
-            // 
-            this.btn_ActualizarDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ActualizarDatos.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ActualizarDatos.Location = new System.Drawing.Point(1017, 792);
-            this.btn_ActualizarDatos.Name = "btn_ActualizarDatos";
-            this.btn_ActualizarDatos.Size = new System.Drawing.Size(265, 43);
-            this.btn_ActualizarDatos.TabIndex = 23;
-            this.btn_ActualizarDatos.Text = "Refrescar Resultados";
-            this.btn_ActualizarDatos.UseVisualStyleBackColor = true;
-            this.btn_ActualizarDatos.Click += new System.EventHandler(this.btn_ActualizarDatos_Click);
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -350,10 +338,23 @@
             this.label4.Text = "Panel de Votaciones";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // btn_ActualizarDatos
+            // 
+            this.btn_ActualizarDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ActualizarDatos.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ActualizarDatos.Location = new System.Drawing.Point(1017, 792);
+            this.btn_ActualizarDatos.Name = "btn_ActualizarDatos";
+            this.btn_ActualizarDatos.Size = new System.Drawing.Size(265, 43);
+            this.btn_ActualizarDatos.TabIndex = 23;
+            this.btn_ActualizarDatos.Text = "Refrescar Resultados";
+            this.btn_ActualizarDatos.UseVisualStyleBackColor = true;
+            this.btn_ActualizarDatos.Click += new System.EventHandler(this.btn_ActualizarDatos_Click);
+            // 
             // tm_Actualizar
             // 
             this.tm_Actualizar.Enabled = true;
             this.tm_Actualizar.Interval = 1000;
+            this.tm_Actualizar.Tick += new System.EventHandler(this.tm_Actualizar_Tick);
             // 
             // lbl_TiempoRes
             // 
@@ -378,6 +379,7 @@
             this.Controls.Add(this.lbl_TiempoRes);
             this.Name = "frm_PanelVotaciones";
             this.Text = "PanelVotaciones";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPanelVotaciones_FormClosing);
             this.Load += new System.EventHandler(this.PanelVotaciones_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -424,5 +426,6 @@
         private System.Windows.Forms.Button btn_ActualizarDatos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_TiempoRes;
+
     }
 }

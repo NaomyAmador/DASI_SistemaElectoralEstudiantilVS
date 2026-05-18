@@ -15,6 +15,7 @@ namespace SistemaElectoralEstudiantil.Votaciones
 {
     public partial class frm_PanelVotaciones : Form
     {
+        private LogicaNegocioVotacion VotacionBLL = new LogicaNegocioVotacion ();
         public frm_PanelVotaciones()
         {
             InitializeComponent();
@@ -35,11 +36,28 @@ namespace SistemaElectoralEstudiantil.Votaciones
             btn_ActualizarDatos.Location = new Point(coordenadaX, coordenadaY);
             btn_ActualizarDatos.BringToFront();
 
-            tm_Actualizar.Interval = 5000;
-            tm_Actualizar.Start();
+            //tm_Actualizar.Interval = 5000;
+            //tm_Actualizar.Start();
 
-            private void VerificarAccesoYMostrar()
-        {
+            //Linea temporal para prueba
+            // ─────────────────────────────────────────────────────────────────
+            // 🛠️ AGREGA ESTO AQUÍ (Elige qué quieres probar cambiando estos valores)
+           // ─────────────────────────────────────────────────────────────────
+            //Sesion.UsuarioActual = new Usuarios { UsuarioID = 1, RolID = 1, YaVoto = true }; // true = Probar como Admin | false = Probar como Estudiante
+            
+
+           // tm_Actualizar.Interval = 5000;
+            //tm_Actualizar.Start();
+
+            // Verificar acceso según rol ANTES de cargar datos
+            VerificarAccesoYMostrar();
+
+            // ─────────────────────────────────────────────────────────────────
+            
+        }
+
+        private void VerificarAccesoYMostrar()
+         {
             // Si es administrador, ve todo sin restricción
             if (Sesion.EsAdmin)
             {
@@ -157,7 +175,28 @@ namespace SistemaElectoralEstudiantil.Votaciones
         // ─────────────────────────────────────────────
         private void CargarDatos()
         {
-            var resultado = votacionBLL.ObtenerEstadisticas();
+            //// ─────────────────────────────────────────────────────────────────
+            //// 🛠️ PEGA ESTE BLOQUE JUSTO ABAJO (Datos falsos para llenar las gráficas):
+            //var s = new EstadisticasVotacion();
+            //s.TotalPadron = 1200;
+            //s.TotalVotaron = 850;
+            //s.TotalNulos = 45;
+            //s.PorcentajeParticipacion = 70.8;
+            //s.PorcentajeNulos = 5.2;
+            //s.TiempoRestante = new TimeSpan(2, 30, 15); // Quedan 2 horas y media
+
+            //s.VotosPorPlancha = new Dictionary<string, int>();
+            //s.VotosPorPlancha.Add("Plancha Trueno", 400);
+            //s.VotosPorPlancha.Add("Fuerza Estudiantil", 280);
+            //s.VotosPorPlancha.Add("Renovación Juvenil", 125);
+
+            //s.PorcentajePorPlancha = new Dictionary<string, double>();
+            //s.PorcentajePorPlancha.Add("Plancha Trueno", 47.1);
+            //s.PorcentajePorPlancha.Add("Fuerza Estudiantil", 32.9);
+            //s.PorcentajePorPlancha.Add("Renovación Juvenil", 14.7);
+
+            // ─────────────────────────────────────────────────────────────────
+            var resultado = VotacionBLL.ObtenerEstadisticas();
 
             if (!resultado.hayVotacion)
             {
@@ -329,7 +368,33 @@ namespace SistemaElectoralEstudiantil.Votaciones
 
         private void btn_ActualizarDatos_Click(object sender, EventArgs e)
         {
+            CargarDatos();
+        }
 
+        private void tm_Actualizar_Tick(object sender, EventArgs e)
+        {
+            if (!Sesion.EsAdmin && !Sesion.UsuarioActual.YaVoto)
+            {
+                LogicaNegocioVotacion logicaVotacion = new LogicaNegocioVotacion();
+                Usuarios usuarioActualizado =
+                    logicaVotacion.ObtenerUsuarioPorID(Sesion.UsuarioActual.UsuarioID);
+
+                if (usuarioActualizado != null && usuarioActualizado.YaVoto)
+                {
+                    Sesion.UsuarioActual.YaVoto = true;
+                    var lblAviso = this.Controls["lblAvisoVoto"];
+                    if (lblAviso != null) this.Controls.Remove(lblAviso);
+                    MostrarContenidoVotante();
+                    CargarDatos();
+                    tm_Actualizar.Start();
+                }
+                return;
+            }
+            CargarDatos();
+        }
+        private void frmPanelVotaciones_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            tm_Actualizar.Stop();
         }
     }
     

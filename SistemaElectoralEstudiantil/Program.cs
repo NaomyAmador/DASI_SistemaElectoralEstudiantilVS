@@ -14,8 +14,8 @@ namespace SistemaElectoralEstudiantil
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Votaciones.PanelVotaciones());
-            Application.Run(new CrearPlancha());
+            Application.Run(new Votaciones.frm_PanelVotaciones());
+           // Application.Run(new CrearPlancha());
         }
     }
 }

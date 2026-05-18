@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entidades;
 
 namespace AccesoDatos
 {
@@ -83,5 +84,50 @@ namespace AccesoDatos
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+
+        public bool ActivarPlancha(int planchaID)
+        {
+            using (SqlConnection conexion = conexionBDD.ObtenerConexion())
+            {
+                string consulta = "UPDATE Planchas SET Activa = 1 WHERE PlanchaID = @PlanchaID";
+                SqlCommand cmd = new SqlCommand(consulta, conexion);
+                cmd.Parameters.AddWithValue("@PlanchaID", planchaID);
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+        public bool ActualizarPlancha (Planchas DatosPlancha)
+        {
+            using (SqlConnection conexion = conexionBDD.ObtenerConexion())
+            {
+                string consulta = "UPDATE Planchas SET NombrePlancha = @NombrePlancha, Logo = @Logo, Descripcion = @Descripcion, Activa = @Activa WHERE PlanchaID =@PlanchaID";
+                SqlCommand cmd = new SqlCommand( consulta, conexion);
+                cmd.Parameters.AddWithValue("@NombrePlancha" , DatosPlancha.NombrePlancha);
+                cmd.Parameters.AddWithValue("@Descripcion", DatosPlancha.Descripcion);
+                cmd.Parameters.AddWithValue("@NombrePlancha", DatosPlancha.NombrePlancha);
+                cmd.Parameters.AddWithValue("@PlanchaID", DatosPlancha.PlanchaID);
+
+                if (DatosPlancha.Logo != null)
+                {
+                    cmd.Parameters.Add("@Logo", SqlDbType.VarBinary).Value = DatosPlancha.Logo;
+                }
+                else
+                {
+                    cmd.Parameters.Add("@Logo", SqlDbType.VarBinary).Value = DBNull.Value;
+                }
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+        public bool EliminarPlancha(int PlanchaID)
+        {
+            using (SqlConnection conexion = conexionBDD.ObtenerConexion())
+            {
+                string consulta = "DELETE FROM Planchas WHERE PlanchaID =@PlanchaID";
+                SqlCommand cmd = new SqlCommand(consulta, conexion);
+                cmd.Parameters.AddWithValue("@PlanchaID", PlanchaID);
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
     }
 }

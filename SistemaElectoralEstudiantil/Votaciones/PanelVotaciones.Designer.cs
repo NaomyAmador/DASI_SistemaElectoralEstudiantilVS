@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -54,6 +57,7 @@
             this.lbl_PorciNulos = new System.Windows.Forms.Label();
             this.chart_Pastel = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_Barras = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tm_Actualizar = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -274,37 +278,53 @@
             // 
             // chart_Pastel
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart_Pastel.ChartAreas.Add(chartArea2);
+            chartArea3.Name = "ChartArea1";
+            this.chart_Pastel.ChartAreas.Add(chartArea3);
             this.chart_Pastel.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart_Pastel.Legends.Add(legend2);
+            legend3.Name = "Legend1";
+            this.chart_Pastel.Legends.Add(legend3);
             this.chart_Pastel.Location = new System.Drawing.Point(3, 3);
             this.chart_Pastel.Name = "chart_Pastel";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart_Pastel.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.CustomProperties = "PieLabelStyle=Outside";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart_Pastel.Series.Add(series3);
             this.chart_Pastel.Size = new System.Drawing.Size(644, 352);
             this.chart_Pastel.TabIndex = 0;
             this.chart_Pastel.Text = "chart1";
+            title3.Name = "Title1";
+            title3.Text = "% Votos por Plancha (Nulos Excluidos)";
+            this.chart_Pastel.Titles.Add(title3);
             // 
             // chart_Barras
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart_Barras.ChartAreas.Add(chartArea1);
+            chartArea4.AxisX.MajorGrid.Enabled = false;
+            chartArea4.AxisY.MajorGrid.Enabled = false;
+            chartArea4.Name = "ChartArea1";
+            this.chart_Barras.ChartAreas.Add(chartArea4);
             this.chart_Barras.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend1.Name = "Legend1";
-            this.chart_Barras.Legends.Add(legend1);
+            legend4.Name = "Legend1";
+            this.chart_Barras.Legends.Add(legend4);
             this.chart_Barras.Location = new System.Drawing.Point(653, 3);
             this.chart_Barras.Name = "chart_Barras";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart_Barras.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart_Barras.Series.Add(series4);
             this.chart_Barras.Size = new System.Drawing.Size(644, 352);
             this.chart_Barras.TabIndex = 1;
             this.chart_Barras.Text = "chart2";
+            title4.Name = "Title1";
+            title4.Text = "Votos Válidos por Plancha";
+            this.chart_Barras.Titles.Add(title4);
+            // 
+            // tm_Actualizar
+            // 
+            this.tm_Actualizar.Enabled = true;
+            this.tm_Actualizar.Interval = 1000;
             // 
             // PanelVotaciones
             // 
@@ -355,5 +375,6 @@
         private System.Windows.Forms.Label lbl_PorEmitido;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Pastel;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Barras;
+        private System.Windows.Forms.Timer tm_Actualizar;
     }
 }

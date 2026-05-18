@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaElectoralEstudiantil.Menu
 {
-    public partial class MenuAdminYVotante : Form
+    public partial class MenuAdmin : Form
     {
-        public MenuAdminYVotante()
+        public MenuAdmin()
         {
             InitializeComponent();
         }

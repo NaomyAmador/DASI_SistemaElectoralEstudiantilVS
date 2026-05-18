@@ -37,7 +37,7 @@ namespace AccesoDatos
                     Planchas p = new Planchas();
                     p.PlanchaID =       Convert.ToInt32(reader["PlanchaID"]);
                     p.NombrePlancha =   reader["NombrePlancha"].ToString();
-                    p.Descripcion =     reader["Description"].ToString();
+                    p.Descripcion =     reader["Descripcion"].ToString();
                     p.Activa =          Convert.ToBoolean(reader["Activa"]);
                     p.Logo =            reader["Logo"] != DBNull.Value ? (byte[])reader["Logo"] : null;
                     Lista.Add(p);

@@ -17,7 +17,13 @@ namespace LogicaNegocio
 
         public (bool exito, string mensaje) CrearPlancha(Planchas plancha, List<Candidatos> candidatos)
         {
-            // Validar nombre único ANTES de tocar la BD
+            List<Planchas> listaExistente = planchaDAL.ObtenerTodasLasPlanchas();
+
+            if (listaExistente.Count >= 4)
+            {
+                return (false, "Límite alcanzado: Solo se permiten 4 planchas activas simultáneamente. Debe eliminar o desactivar una para continuar.");
+            }
+
             if (planchaDAL.ExisteNombrePlancha(plancha.NombrePlancha))
                 return (false, $"Ya existe una plancha con el nombre '{plancha.NombrePlancha}'.");
 

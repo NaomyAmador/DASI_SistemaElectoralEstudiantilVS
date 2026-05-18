@@ -11,7 +11,7 @@ namespace LogicaNegocio
     public class UsuarioNegocio
     {
         DatosUsuario Datos = new DatosUsuario();
-        public LoginUsuario Login(string usuario, string password)
+        public Usuarios Login(string usuario, string password)
         {
             if (usuario == "")
             {
@@ -23,7 +23,7 @@ namespace LogicaNegocio
                 throw new Exception("Ingrese la Contraseña");
             }
 
-            LoginUsuario User = Datos.Login(usuario, password);
+            Usuarios User = Datos.Login(usuario, password);
             if (User == null)
             {
                 throw new Exception("Usuario o Contraseña incorrectas");

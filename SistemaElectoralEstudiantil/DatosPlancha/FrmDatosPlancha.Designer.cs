@@ -216,6 +216,7 @@
             this.Btn_Votar.TabIndex = 13;
             this.Btn_Votar.Text = "Votar";
             this.Btn_Votar.UseVisualStyleBackColor = false;
+            this.Btn_Votar.Click += new System.EventHandler(this.Btn_Votar_Click);
             // 
             // Btn_InfoTesorero
             // 

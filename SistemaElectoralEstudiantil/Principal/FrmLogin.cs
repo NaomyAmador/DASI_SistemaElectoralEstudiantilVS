@@ -17,7 +17,7 @@ namespace SistemaElectoralEstudiantil.Principal
 {
     public partial class FrmLogin : Form
     {
-        LoginUsuario User;
+        Usuarios User;
         public FrmLogin()
         {
             InitializeComponent();
@@ -39,14 +39,15 @@ namespace SistemaElectoralEstudiantil.Principal
         {
             try
             {
-                UsuarioNegocio Lógica = new UsuarioNegocio();
-                User = Lógica.Login(TxtBox_Usuario.Text, TxtBox_Password.Text);
+                UsuarioNegocio Logica = new UsuarioNegocio();
+                User = Logica.Login(TxtBox_Usuario.Text, TxtBox_Password.Text);
+                Sesion.UsuarioActual = User;
+
+                //Reiniciar ProgressBar
                 ProgressBar_InicioSesión.Value = 0;
-
-                //Volver al Label visible
-                Lbl_ProgressBarTexto.Text = "Iniciando Sesión...";
+                Lbl_ProgressBarTexto.Text = "Iniciando sesión...";
                 Lbl_ProgressBarTexto.ForeColor = Color.Peru;
-
+                //Iniciar Timer
                 Tiempo_InicioSesión.Start();
             }
             catch (Exception Errores)
@@ -58,22 +59,21 @@ namespace SistemaElectoralEstudiantil.Principal
         private void Tiempo_InicioSesión_Tick(object sender, EventArgs e)
         {
             ProgressBar_InicioSesión.PerformStep();
-            if (ProgressBar_InicioSesión.Value == 100)
+            if (ProgressBar_InicioSesión.Value >= 100)
             {
                 Tiempo_InicioSesión.Stop();
+                MessageBox.Show( "Bienvenido " + User.NombreCompleto);
                 this.Hide();
 
                 if (User.RolID == 1)
                 {
-                    //Llevar al FormAdmin
-                    FrmAdmin FormAdmin = new FrmAdmin();
-                    FormAdmin.Show();
+                    FrmAdmin FrmAdmin = new FrmAdmin();
+                    FrmAdmin.Show();
                 }
                 else
                 {
-                    //Llevar al FormVotante
-                    FrmVotante FormVotante = new FrmVotante();
-                    FormVotante.Show();
+                    FrmVotante FrmVotante = new FrmVotante();
+                    FrmVotante.Show();
                 }
             }
         }

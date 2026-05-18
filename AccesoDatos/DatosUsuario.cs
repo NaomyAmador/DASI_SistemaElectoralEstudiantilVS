@@ -12,38 +12,36 @@ namespace AccesoDatos
     public class DatosUsuario
     {
         ConexionBDD conexionBD = new ConexionBDD();
-        public LoginUsuario Login(string usuario, string password)
+        public Usuarios Login(string Usuario, string Password)
         {
-            SqlConnection conexion = conexionBD.ObtenerConexion();
-            SqlCommand Procedimiento = new SqlCommand("LoginUsuario", conexion);
-            
-            Procedimiento.CommandType = CommandType.StoredProcedure;
-            Procedimiento.Parameters.AddWithValue("@Usuario", usuario);
-            Procedimiento.Parameters.AddWithValue("@Password", password);
-            
-            SqlDataReader LecturaDatos = Procedimiento.ExecuteReader();
-            //Variable vacía a utilizar más adelante
-            LoginUsuario User = null;
-
-            if (LecturaDatos.Read())
+            using (SqlConnection Conexion = conexionBD.ObtenerConexion())
             {
-                //Objeto a usar: User
-                User = new LoginUsuario();
+                Conexion.Open();
+                SqlCommand Procedimiento = new SqlCommand("LoginUsuario", Conexion);
+                Procedimiento.CommandType = CommandType.StoredProcedure;
+                Procedimiento.Parameters.AddWithValue("@Usuario", Usuario);
+                Procedimiento.Parameters.AddWithValue("@Password", Password);
 
-                //Llenar datos mediante el Objeto
-                User.UsuarioID = Convert.ToInt32(LecturaDatos["UsuarioID"]);
-                User.NombreCompleto = LecturaDatos["NombreCompleto"].ToString();
-                User.UsuarioLogin = LecturaDatos["Usuario"].ToString();
-                User.Correo = LecturaDatos["Correo"].ToString();
-                User.Matricula = LecturaDatos["Matricula"].ToString();
-                User.Curso = LecturaDatos["Curso"].ToString();
-                User.Seccion = LecturaDatos["Seccion"].ToString();
-                User.RolID =Convert.ToInt32(LecturaDatos["RolID"]);
+                using (SqlDataReader LecturaDatos = Procedimiento.ExecuteReader())
+                {
+                    Usuarios User = null;
+                    if (LecturaDatos.Read())
+                    {
+                        User = new Usuarios();
+                        User.UsuarioID = Convert.ToInt32(LecturaDatos["UsuarioID"]);
+                        User.NombreCompleto = LecturaDatos["NombreCompleto"].ToString();
+                        User.Usuario = LecturaDatos["Usuario"].ToString();
+                        User.Correo = LecturaDatos["Correo"].ToString();
+                        User.Matricula = LecturaDatos["Matricula"].ToString();
+                        User.Curso = LecturaDatos["Curso"].ToString();
+                        User.Seccion = LecturaDatos["Seccion"].ToString();
+                        User.RolID = Convert.ToInt32(LecturaDatos["RolID"]);
+                        return User;
+                    }
+
+                    return null;
+                }
             }
-
-            conexion.Close();
-
-            return User;
         }
 
     }

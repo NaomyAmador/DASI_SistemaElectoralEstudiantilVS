@@ -6,15 +6,21 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class LoginUsuario
+    public class Usuarios
     {
         public int UsuarioID { get; set; }
         public string NombreCompleto { get; set; }
-        public string UsuarioLogin { get; set; }
+        public string Usuario { get; set; }
+
+        [System.ComponentModel.Browsable(false)]
+        public string PasswordHash { get; set; }
         public string Correo {  get; set; }
         public string Matricula { get; set; }
         public string Curso { get; set; }
         public string Seccion { get; set; }
+        public bool Yavoto { get; set; }
+        public bool Activo { get; set; }
         public int RolID { get; set; }
+        public int PadronID { get; set; }
     }
 }

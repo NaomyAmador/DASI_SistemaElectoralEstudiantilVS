@@ -17,7 +17,6 @@ namespace AccesoDatos
         public SqlConnection ObtenerConexion()
         {
             SqlConnection Conexion = new SqlConnection(CadenaConexion);
-            Conexion.Open();
             return Conexion;
         }
     }

@@ -51,5 +51,10 @@ namespace SistemaElectoralEstudiantil.DatosPlancha
         {
             MostrarDatos("Carlos Gómez", "5to de Electrónica", "Mejor control monetario", "¡Unidos somos mejores!", pictureBox4.Image);
         }
+
+        private void Btn_Votar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

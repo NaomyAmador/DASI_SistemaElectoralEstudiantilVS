@@ -1,6 +1,5 @@
 ﻿using Entidades;
 using LogicaNegocio;
-using SistemaElectoralEstudiantil.DatosPlancha;
 using SistemaElectoralEstudiantil.FolderPrueba;
 using System;
 using System.Collections.Generic;
@@ -66,7 +65,7 @@ namespace SistemaElectoralEstudiantil.Principal
                 if (User.RolID == 1)
                 {
                     //Llevar al FormAdmin
-                    FrmDatosPlancha FormAdmin = new FrmDatosPlancha();
+                    FrmAdmin FormAdmin = new FrmAdmin();
                     FormAdmin.Show();
                 }
                 else

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDatosPlancha));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -54,6 +55,11 @@
             this.Lbl_Frase = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,46 +69,51 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(46, 107);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(45, 310);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(136, 130);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(232, 310);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(137, 130);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(232, 107);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(137, 130);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
             // PicBox_CandidatoElegido
             // 
-            this.PicBox_CandidatoElegido.Location = new System.Drawing.Point(489, 148);
+            this.PicBox_CandidatoElegido.Image = ((System.Drawing.Image)(resources.GetObject("PicBox_CandidatoElegido.Image")));
+            this.PicBox_CandidatoElegido.Location = new System.Drawing.Point(489, 139);
             this.PicBox_CandidatoElegido.Name = "PicBox_CandidatoElegido";
             this.PicBox_CandidatoElegido.Size = new System.Drawing.Size(137, 130);
-            this.PicBox_CandidatoElegido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicBox_CandidatoElegido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_CandidatoElegido.TabIndex = 4;
             this.PicBox_CandidatoElegido.TabStop = false;
             // 
@@ -111,7 +122,7 @@
             this.Lbl_Decoración1.AutoSize = true;
             this.Lbl_Decoración1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración1.ForeColor = System.Drawing.Color.Peru;
-            this.Lbl_Decoración1.Location = new System.Drawing.Point(438, 301);
+            this.Lbl_Decoración1.Location = new System.Drawing.Point(438, 292);
             this.Lbl_Decoración1.Name = "Lbl_Decoración1";
             this.Lbl_Decoración1.Size = new System.Drawing.Size(81, 19);
             this.Lbl_Decoración1.TabIndex = 5;
@@ -122,7 +133,7 @@
             this.Lbl_Decoración2.AutoSize = true;
             this.Lbl_Decoración2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración2.ForeColor = System.Drawing.Color.Peru;
-            this.Lbl_Decoración2.Location = new System.Drawing.Point(438, 329);
+            this.Lbl_Decoración2.Location = new System.Drawing.Point(438, 320);
             this.Lbl_Decoración2.Name = "Lbl_Decoración2";
             this.Lbl_Decoración2.Size = new System.Drawing.Size(61, 19);
             this.Lbl_Decoración2.TabIndex = 6;
@@ -133,7 +144,7 @@
             this.Lbl_Decoración3.AutoSize = true;
             this.Lbl_Decoración3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración3.ForeColor = System.Drawing.Color.Peru;
-            this.Lbl_Decoración3.Location = new System.Drawing.Point(438, 358);
+            this.Lbl_Decoración3.Location = new System.Drawing.Point(438, 349);
             this.Lbl_Decoración3.Name = "Lbl_Decoración3";
             this.Lbl_Decoración3.Size = new System.Drawing.Size(95, 19);
             this.Lbl_Decoración3.TabIndex = 7;
@@ -144,7 +155,7 @@
             this.Lbl_Decoración4.AutoSize = true;
             this.Lbl_Decoración4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración4.ForeColor = System.Drawing.Color.Peru;
-            this.Lbl_Decoración4.Location = new System.Drawing.Point(438, 388);
+            this.Lbl_Decoración4.Location = new System.Drawing.Point(438, 379);
             this.Lbl_Decoración4.Name = "Lbl_Decoración4";
             this.Lbl_Decoración4.Size = new System.Drawing.Size(132, 19);
             this.Lbl_Decoración4.TabIndex = 8;
@@ -197,11 +208,11 @@
             // Btn_Votar
             // 
             this.Btn_Votar.BackColor = System.Drawing.Color.Peru;
-            this.Btn_Votar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Votar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Votar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Votar.Location = new System.Drawing.Point(490, 432);
+            this.Btn_Votar.Location = new System.Drawing.Point(488, 420);
             this.Btn_Votar.Name = "Btn_Votar";
-            this.Btn_Votar.Size = new System.Drawing.Size(137, 37);
+            this.Btn_Votar.Size = new System.Drawing.Size(146, 40);
             this.Btn_Votar.TabIndex = 13;
             this.Btn_Votar.Text = "Votar";
             this.Btn_Votar.UseVisualStyleBackColor = false;
@@ -237,7 +248,7 @@
             this.Btn_InfoPresidente.BackColor = System.Drawing.Color.Chocolate;
             this.Btn_InfoPresidente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_InfoPresidente.ForeColor = System.Drawing.Color.White;
-            this.Btn_InfoPresidente.Location = new System.Drawing.Point(32, 262);
+            this.Btn_InfoPresidente.Location = new System.Drawing.Point(33, 262);
             this.Btn_InfoPresidente.Name = "Btn_InfoPresidente";
             this.Btn_InfoPresidente.Size = new System.Drawing.Size(161, 30);
             this.Btn_InfoPresidente.TabIndex = 16;
@@ -276,14 +287,14 @@
             this.Lbl_Decoración10.ForeColor = System.Drawing.Color.Sienna;
             this.Lbl_Decoración10.Location = new System.Drawing.Point(170, 58);
             this.Lbl_Decoración10.Name = "Lbl_Decoración10";
-            this.Lbl_Decoración10.Size = new System.Drawing.Size(399, 17);
+            this.Lbl_Decoración10.Size = new System.Drawing.Size(361, 17);
             this.Lbl_Decoración10.TabIndex = 19;
             this.Lbl_Decoración10.Text = "★ ¡Conoce a los candidatos que cambiarán la institución! ★";
             // 
             // Lbl_Nombre
             // 
             this.Lbl_Nombre.AutoSize = true;
-            this.Lbl_Nombre.Location = new System.Drawing.Point(518, 303);
+            this.Lbl_Nombre.Location = new System.Drawing.Point(518, 294);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
             this.Lbl_Nombre.Size = new System.Drawing.Size(155, 16);
             this.Lbl_Nombre.TabIndex = 20;
@@ -292,7 +303,7 @@
             // Lbl_Curso
             // 
             this.Lbl_Curso.AutoSize = true;
-            this.Lbl_Curso.Location = new System.Drawing.Point(503, 331);
+            this.Lbl_Curso.Location = new System.Drawing.Point(503, 322);
             this.Lbl_Curso.Name = "Lbl_Curso";
             this.Lbl_Curso.Size = new System.Drawing.Size(155, 16);
             this.Lbl_Curso.TabIndex = 21;
@@ -301,7 +312,7 @@
             // Lbl_Propuesta
             // 
             this.Lbl_Propuesta.AutoSize = true;
-            this.Lbl_Propuesta.Location = new System.Drawing.Point(534, 360);
+            this.Lbl_Propuesta.Location = new System.Drawing.Point(534, 351);
             this.Lbl_Propuesta.Name = "Lbl_Propuesta";
             this.Lbl_Propuesta.Size = new System.Drawing.Size(155, 16);
             this.Lbl_Propuesta.TabIndex = 22;
@@ -310,7 +321,7 @@
             // Lbl_Frase
             // 
             this.Lbl_Frase.AutoSize = true;
-            this.Lbl_Frase.Location = new System.Drawing.Point(567, 390);
+            this.Lbl_Frase.Location = new System.Drawing.Point(567, 381);
             this.Lbl_Frase.Name = "Lbl_Frase";
             this.Lbl_Frase.Size = new System.Drawing.Size(155, 16);
             this.Lbl_Frase.TabIndex = 23;
@@ -322,7 +333,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Chocolate;
-            this.label1.Location = new System.Drawing.Point(606, 130);
+            this.label1.Location = new System.Drawing.Point(189, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 36);
             this.label1.TabIndex = 24;
@@ -339,12 +350,77 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Usa tu Voto con Responsabilidad";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Chocolate;
+            this.label3.Location = new System.Drawing.Point(189, 362);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 36);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "★";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Chocolate;
+            this.label4.Location = new System.Drawing.Point(477, 465);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(177, 36);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "⋅˚₊‧ ୨🕮୧ ‧₊˚ ⋅";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Chocolate;
+            this.label5.Location = new System.Drawing.Point(628, 197);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 36);
+            this.label5.TabIndex = 28;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Papillion PERSONAL USE ONLY", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Chocolate;
+            this.label6.Location = new System.Drawing.Point(462, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(183, 52);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Candidato Seleccionado";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Chocolate;
+            this.label7.Location = new System.Drawing.Point(624, 88);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 36);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "✍︎";
+            // 
             // FrmDatosPlancha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(738, 523);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Lbl_Frase);
@@ -412,5 +488,10 @@
         private System.Windows.Forms.Label Lbl_Frase;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

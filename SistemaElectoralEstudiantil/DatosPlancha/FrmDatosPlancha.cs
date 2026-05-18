@@ -23,32 +23,33 @@ namespace SistemaElectoralEstudiantil.DatosPlancha
 
         }
 
-        private void MostrarDatos(string Nombre, string Curso, string Propuesta, string FrasePersonal)
+        private void MostrarDatos(string Nombre, string Curso, string Propuesta, string FrasePersonal, Image Foto)
         {
-            Lbl_Nombre.Text = "Nombre: " + Nombre;
-            Lbl_Curso.Text = "Curso: " + Curso;
-            Lbl_Propuesta.Text = "Cargo: " + Propuesta;
-            Lbl_Frase.Text = "Propuesta: " + FrasePersonal;
+            Lbl_Nombre.Text = Nombre;
+            Lbl_Curso.Text = Curso;
+            Lbl_Propuesta.Text = Propuesta;
+            Lbl_Frase.Text = FrasePersonal;
+            PicBox_CandidatoElegido.Image = Foto;
         }
 
         private void Btn_InfoPresidente_Click(object sender, EventArgs e)
         {
-            MostrarDatos("Miriam Rogríguez", "5to A Informática", "Mejorar las actividades estudiantiles", "¡Juntos podemos más!");
+            MostrarDatos("Miriam Rogríguez", "5to A Informática", "Más actividades estudiantiles", "¡Juntos podemos más!", pictureBox1.Image);
         }
 
         private void Btn_InfoVicepresidente_Click(object sender, EventArgs e)
         {
-            MostrarDatos("José Pérez", "5to B Gestión", "Apoyar más eventos escolares", "¡El cambio empieza hoy!");
+            MostrarDatos("José Pérez", "5to B Gestión", "Más eventos escolares", "¡El cambio empieza hoy!", pictureBox2.Image);
         }
 
         private void Btn_InfoSecretario_Click(object sender, EventArgs e)
         {
-            MostrarDatos("Ana Martínez", "5to A Gastronomía", "Mejor comunicación entre estudiantes", "¡Tu voz cuenta!");
+            MostrarDatos("Ana Martínez", "5to A Gastronomía", "Mejor comunicación", "¡Tu voz cuenta!", pictureBox3.Image);
         }
 
         private void Btn_InfoTesorero_Click(object sender, EventArgs e)
         {
-            MostrarDatos("Carlos Gómez", "5to de Electrónica", "Organizar mejor los fondos estudiantiles", "¡Unidos somos mejores!");
+            MostrarDatos("Carlos Gómez", "5to de Electrónica", "Mejor control monetario", "¡Unidos somos mejores!", pictureBox4.Image);
         }
     }
 }

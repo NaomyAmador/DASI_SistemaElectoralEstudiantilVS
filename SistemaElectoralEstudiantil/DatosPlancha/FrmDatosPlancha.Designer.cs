@@ -222,9 +222,9 @@
             this.Btn_InfoTesorero.BackColor = System.Drawing.Color.Chocolate;
             this.Btn_InfoTesorero.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_InfoTesorero.ForeColor = System.Drawing.Color.White;
-            this.Btn_InfoTesorero.Location = new System.Drawing.Point(223, 465);
+            this.Btn_InfoTesorero.Location = new System.Drawing.Point(214, 464);
             this.Btn_InfoTesorero.Name = "Btn_InfoTesorero";
-            this.Btn_InfoTesorero.Size = new System.Drawing.Size(161, 30);
+            this.Btn_InfoTesorero.Size = new System.Drawing.Size(173, 37);
             this.Btn_InfoTesorero.TabIndex = 14;
             this.Btn_InfoTesorero.Text = "Ver Información";
             this.Btn_InfoTesorero.UseVisualStyleBackColor = false;
@@ -235,9 +235,9 @@
             this.Btn_InfoVicepresidente.BackColor = System.Drawing.Color.Chocolate;
             this.Btn_InfoVicepresidente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_InfoVicepresidente.ForeColor = System.Drawing.Color.White;
-            this.Btn_InfoVicepresidente.Location = new System.Drawing.Point(221, 262);
+            this.Btn_InfoVicepresidente.Location = new System.Drawing.Point(212, 261);
             this.Btn_InfoVicepresidente.Name = "Btn_InfoVicepresidente";
-            this.Btn_InfoVicepresidente.Size = new System.Drawing.Size(161, 30);
+            this.Btn_InfoVicepresidente.Size = new System.Drawing.Size(173, 37);
             this.Btn_InfoVicepresidente.TabIndex = 15;
             this.Btn_InfoVicepresidente.Text = "Ver Información";
             this.Btn_InfoVicepresidente.UseVisualStyleBackColor = false;
@@ -248,9 +248,9 @@
             this.Btn_InfoPresidente.BackColor = System.Drawing.Color.Chocolate;
             this.Btn_InfoPresidente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_InfoPresidente.ForeColor = System.Drawing.Color.White;
-            this.Btn_InfoPresidente.Location = new System.Drawing.Point(33, 262);
+            this.Btn_InfoPresidente.Location = new System.Drawing.Point(24, 261);
             this.Btn_InfoPresidente.Name = "Btn_InfoPresidente";
-            this.Btn_InfoPresidente.Size = new System.Drawing.Size(161, 30);
+            this.Btn_InfoPresidente.Size = new System.Drawing.Size(173, 37);
             this.Btn_InfoPresidente.TabIndex = 16;
             this.Btn_InfoPresidente.Text = "Ver Información";
             this.Btn_InfoPresidente.UseVisualStyleBackColor = false;
@@ -261,9 +261,9 @@
             this.Btn_InfoSecretario.BackColor = System.Drawing.Color.Chocolate;
             this.Btn_InfoSecretario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_InfoSecretario.ForeColor = System.Drawing.Color.White;
-            this.Btn_InfoSecretario.Location = new System.Drawing.Point(31, 465);
+            this.Btn_InfoSecretario.Location = new System.Drawing.Point(22, 464);
             this.Btn_InfoSecretario.Name = "Btn_InfoSecretario";
-            this.Btn_InfoSecretario.Size = new System.Drawing.Size(161, 30);
+            this.Btn_InfoSecretario.Size = new System.Drawing.Size(173, 37);
             this.Btn_InfoSecretario.TabIndex = 17;
             this.Btn_InfoSecretario.Text = "Ver Información";
             this.Btn_InfoSecretario.UseVisualStyleBackColor = false;
@@ -274,18 +274,18 @@
             this.Lbl_Decoración9.AutoSize = true;
             this.Lbl_Decoración9.Font = new System.Drawing.Font("Papillion PERSONAL USE ONLY", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración9.ForeColor = System.Drawing.Color.Chocolate;
-            this.Lbl_Decoración9.Location = new System.Drawing.Point(-1, -6);
+            this.Lbl_Decoración9.Location = new System.Drawing.Point(4, -6);
             this.Lbl_Decoración9.Name = "Lbl_Decoración9";
-            this.Lbl_Decoración9.Size = new System.Drawing.Size(741, 86);
+            this.Lbl_Decoración9.Size = new System.Drawing.Size(681, 86);
             this.Lbl_Decoración9.TabIndex = 18;
-            this.Lbl_Decoración9.Text = "✰•······················•✰ Datos de Plancha ✰•······················•✰";
+            this.Lbl_Decoración9.Text = "✰•·················•✰ Datos de Plancha ✰•·················•✰";
             // 
             // Lbl_Decoración10
             // 
             this.Lbl_Decoración10.AutoSize = true;
             this.Lbl_Decoración10.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración10.ForeColor = System.Drawing.Color.Sienna;
-            this.Lbl_Decoración10.Location = new System.Drawing.Point(170, 58);
+            this.Lbl_Decoración10.Location = new System.Drawing.Point(162, 58);
             this.Lbl_Decoración10.Name = "Lbl_Decoración10";
             this.Lbl_Decoración10.Size = new System.Drawing.Size(361, 17);
             this.Lbl_Decoración10.TabIndex = 19;
@@ -294,36 +294,40 @@
             // Lbl_Nombre
             // 
             this.Lbl_Nombre.AutoSize = true;
+            this.Lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Nombre.Location = new System.Drawing.Point(518, 294);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
-            this.Lbl_Nombre.Size = new System.Drawing.Size(155, 16);
+            this.Lbl_Nombre.Size = new System.Drawing.Size(171, 17);
             this.Lbl_Nombre.TabIndex = 20;
             this.Lbl_Nombre.Text = "Candidato a Seleccionar";
             // 
             // Lbl_Curso
             // 
             this.Lbl_Curso.AutoSize = true;
-            this.Lbl_Curso.Location = new System.Drawing.Point(503, 322);
+            this.Lbl_Curso.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Curso.Location = new System.Drawing.Point(496, 322);
             this.Lbl_Curso.Name = "Lbl_Curso";
-            this.Lbl_Curso.Size = new System.Drawing.Size(155, 16);
+            this.Lbl_Curso.Size = new System.Drawing.Size(171, 17);
             this.Lbl_Curso.TabIndex = 21;
             this.Lbl_Curso.Text = "Candidato a Seleccionar";
             // 
             // Lbl_Propuesta
             // 
             this.Lbl_Propuesta.AutoSize = true;
-            this.Lbl_Propuesta.Location = new System.Drawing.Point(534, 351);
+            this.Lbl_Propuesta.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Propuesta.Location = new System.Drawing.Point(532, 351);
             this.Lbl_Propuesta.Name = "Lbl_Propuesta";
-            this.Lbl_Propuesta.Size = new System.Drawing.Size(155, 16);
+            this.Lbl_Propuesta.Size = new System.Drawing.Size(171, 17);
             this.Lbl_Propuesta.TabIndex = 22;
             this.Lbl_Propuesta.Text = "Candidato a Seleccionar";
             // 
             // Lbl_Frase
             // 
             this.Lbl_Frase.AutoSize = true;
-            this.Lbl_Frase.Location = new System.Drawing.Point(567, 381);
+            this.Lbl_Frase.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Frase.Location = new System.Drawing.Point(569, 381);
             this.Lbl_Frase.Name = "Lbl_Frase";
-            this.Lbl_Frase.Size = new System.Drawing.Size(155, 16);
+            this.Lbl_Frase.Size = new System.Drawing.Size(171, 17);
             this.Lbl_Frase.TabIndex = 23;
             this.Lbl_Frase.Text = "Candidato a Seleccionar";
             // 
@@ -344,7 +348,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 6F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label2.Location = new System.Drawing.Point(280, 79);
+            this.label2.Location = new System.Drawing.Point(268, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 15);
             this.label2.TabIndex = 25;
@@ -392,7 +396,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Papillion PERSONAL USE ONLY", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Chocolate;
-            this.label6.Location = new System.Drawing.Point(462, 98);
+            this.label6.Location = new System.Drawing.Point(460, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(183, 52);
             this.label6.TabIndex = 29;
@@ -404,7 +408,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Chocolate;
-            this.label7.Location = new System.Drawing.Point(624, 88);
+            this.label7.Location = new System.Drawing.Point(643, 82);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 36);
             this.label7.TabIndex = 30;
@@ -415,7 +419,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(738, 523);
+            this.ClientSize = new System.Drawing.Size(745, 517);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

@@ -30,7 +30,7 @@ namespace AccesoDatos
             List<Planchas> Lista = new List <Planchas>();
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
-                string Consulta = "SELECT PlanchaID, NombrePlancha, Logo, Descripcion, Activa FROM Planchas WHERE Activa = 1";
+                string Consulta = "SELECT PlanchaID, NombrePlancha, Logo, Descripcion, Activa FROM Planchas";
                 SqlCommand Planchas = new SqlCommand(Consulta,Conexion);
                 SqlDataReader reader = Planchas.ExecuteReader();
                 while (reader.Read())
@@ -103,7 +103,7 @@ namespace AccesoDatos
                 SqlCommand cmd = new SqlCommand( consulta, conexion);
                 cmd.Parameters.AddWithValue("@NombrePlancha" , DatosPlancha.NombrePlancha);
                 cmd.Parameters.AddWithValue("@Descripcion", DatosPlancha.Descripcion);
-                cmd.Parameters.AddWithValue("@NombrePlancha", DatosPlancha.NombrePlancha);
+                cmd.Parameters.AddWithValue("@Activa", DatosPlancha.Activa);
                 cmd.Parameters.AddWithValue("@PlanchaID", DatosPlancha.PlanchaID);
 
                 if (DatosPlancha.Logo != null)

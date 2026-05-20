@@ -44,6 +44,7 @@
     <Compile Include="AddCandidato.cs" />
     <Compile Include="AddPlancha.cs" />
     <Compile Include="AuditoriaDAL.cs" />
+    <Compile Include="CandidatoDAL.cs" />
     <Compile Include="ConexionBDD.cs" />
     <Compile Include="PlanchaDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

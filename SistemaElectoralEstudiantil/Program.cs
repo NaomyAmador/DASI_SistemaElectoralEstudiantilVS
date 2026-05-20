@@ -1,4 +1,5 @@
-﻿using SistemaElectoralEstudiantil.Principal;
+﻿using SistemaElectoralEstudiantil.EditarPlanchaYCandidato;
+using SistemaElectoralEstudiantil.Principal;
 using System;
 using System.Windows.Forms;
 
@@ -14,8 +15,10 @@ namespace SistemaElectoralEstudiantil
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Votaciones.frm_PanelVotaciones());
-           // Application.Run(new CrearPlancha());
+            //Application.Run(new Votaciones.frm_PanelVotaciones());
+           //Application.Run(new EditarPlanchaYCandidato.GestionPlancha());
+            Application.Run(new GestionCandidatos()); 
+            // Application.Run(new CrearPlancha());
         }
     }
 }

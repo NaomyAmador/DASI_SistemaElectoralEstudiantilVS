@@ -17,21 +17,21 @@ namespace AccesoDatos
 
         public List<Usuarios> ListarUsuarios()
         {
-            List<Usuarios> lista =new List<Usuarios>();
+            List<Usuarios> lista = new List<Usuarios>();
 
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
                 SqlCommand cmd = new SqlCommand("[MostrarTodosLosUsuarios]", conexion);
 
                 cmd.CommandType = CommandType.StoredProcedure;
-                              
-                SqlDataReader dr =  cmd.ExecuteReader();
+
+                SqlDataReader dr = cmd.ExecuteReader();
 
                 while (dr.Read())
                 {
                     Usuarios user = new Usuarios();
 
-                    user.UsuarioID =Convert.ToInt32( dr["UsuarioID"]);
+                    user.UsuarioID = Convert.ToInt32(dr["UsuarioID"]);
 
                     user.NombreCompleto = dr["NombreCompleto"].ToString();
 
@@ -39,20 +39,20 @@ namespace AccesoDatos
 
                     user.Correo = dr["Correo"].ToString();
 
-                    user.Matricula =dr["Matricula"].ToString();
+                    user.Matricula = dr["Matricula"].ToString();
 
                     user.Curso = dr["Curso"].ToString();
 
-                    user.Seccion =dr["Seccion"].ToString();
+                    user.Seccion = dr["Seccion"].ToString();
 
-                    user.RolID = Convert.ToInt32( dr["RolID"]);
+                    user.RolID = Convert.ToInt32(dr["RolID"]);
 
-                    user.Activo = Convert.ToBoolean( dr["Activo"]);
+                    user.Activo = Convert.ToBoolean(dr["Activo"]);
 
                     lista.Add(user);
-                    
+
                 }
-                
+
             }
 
 
@@ -62,26 +62,26 @@ namespace AccesoDatos
 
         public List<Usuarios> BuscarUsuariosPorNombre(string nombre)
         {
-            List<Usuarios> lista =new List<Usuarios>();
+            List<Usuarios> lista = new List<Usuarios>();
 
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
-                SqlCommand cmd =new SqlCommand("BuscarUsuariosPorNombre",conexion);
+                SqlCommand cmd = new SqlCommand("BuscarUsuariosPorNombre", conexion);
 
-                cmd.CommandType =CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@Nombre",nombre);
+                cmd.Parameters.AddWithValue("@Nombre", nombre);
 
-               
+
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 while (dr.Read())
                 {
-                    Usuarios user =new Usuarios();
+                    Usuarios user = new Usuarios();
 
                     user.UsuarioID = Convert.ToInt32(dr["UsuarioID"]);
 
-                    user.NombreCompleto =dr["NombreCompleto"].ToString();
+                    user.NombreCompleto = dr["NombreCompleto"].ToString();
 
                     user.Usuario = dr["Usuario"].ToString();
 
@@ -89,13 +89,13 @@ namespace AccesoDatos
 
                     user.Matricula = dr["Matricula"].ToString();
 
-                    user.Curso = dr["Curso"] .ToString();
+                    user.Curso = dr["Curso"].ToString();
 
-                    user.Seccion =dr["Seccion"].ToString();
+                    user.Seccion = dr["Seccion"].ToString();
 
                     user.RolID = Convert.ToInt32(dr["RolID"]);
 
-                    user.Activo =Convert.ToBoolean(dr["Activo"]);
+                    user.Activo = Convert.ToBoolean(dr["Activo"]);
 
                     lista.Add(user);
                 }
@@ -119,10 +119,10 @@ namespace AccesoDatos
                 cmd.Parameters.AddWithValue("@Usuario", Usuario);
                 cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
 
-               
+
                 SqlDataReader dr = cmd.ExecuteReader();
 
-                
+
                 if (dr.Read())
 
                 {
@@ -142,7 +142,7 @@ namespace AccesoDatos
                 }
 
             }
-                return user;
+            return user;
         }
         public bool RegistrarUsuario(string NombreCompleto, string Usuario, String Contraseña, string Correo, string Matricula, string Curso, string Seccion)
         {
@@ -174,9 +174,9 @@ namespace AccesoDatos
 
         }
 
-                public bool EliminarUsuario(int ID)
-                 {
-            try 
+        public bool EliminarUsuario(int ID)
+        {
+            try
             {
                 using (SqlConnection conexion = conexionBDD.ObtenerConexion())
                 {
@@ -187,10 +187,10 @@ namespace AccesoDatos
 
                     command.Parameters.AddWithValue("@UsuarioID", ID);
 
-                   
+
 
                     return command.ExecuteNonQuery() > 0;
-                   
+
                 }
             }
 
@@ -212,15 +212,15 @@ namespace AccesoDatos
 
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@UsuarioID", usuario.UsuarioID);
-                    command.Parameters.AddWithValue( "@Usuario",usuario.Usuario);
+                    command.Parameters.AddWithValue("@Usuario", usuario.Usuario);
                     command.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
                     command.Parameters.AddWithValue("@Correo", usuario.Correo);
                     command.Parameters.AddWithValue("@Matricula", usuario.Matricula);
                     command.Parameters.AddWithValue("@Curso", usuario.Curso);
                     command.Parameters.AddWithValue("@Seccion", usuario.Seccion);
 
-                 
-                    
+
+
                     return command.ExecuteNonQuery() > 0;
 
 
@@ -239,13 +239,13 @@ namespace AccesoDatos
         {
             try
             {
-                using (SqlConnection conexion =conexionBDD.ObtenerConexion())
+                using (SqlConnection conexion = conexionBDD.ObtenerConexion())
                 {
-                    SqlCommand cmd = new SqlCommand( "ConvertirUsuarioAdmin",conexion);
+                    SqlCommand cmd = new SqlCommand("ConvertirUsuarioAdmin", conexion);
 
-                    cmd.CommandType =CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@UsuarioID",usuarioID);
+                    cmd.Parameters.AddWithValue("@UsuarioID", usuarioID);
 
 
                     return cmd.ExecuteNonQuery() > 0;
@@ -253,7 +253,7 @@ namespace AccesoDatos
             }
             catch (Exception ex)
             {
-                throw new Exception( ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 
@@ -265,11 +265,11 @@ namespace AccesoDatos
                 using (SqlConnection conexion =
                     conexionBDD.ObtenerConexion())
                 {
-                    SqlCommand cmd = new SqlCommand( "QuitarAdmin", conexion);
+                    SqlCommand cmd = new SqlCommand("QuitarAdmin", conexion);
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@UsuarioID",usuarioID);
+                    cmd.Parameters.AddWithValue("@UsuarioID", usuarioID);
 
 
                     return cmd.ExecuteNonQuery() > 0;
@@ -283,6 +283,27 @@ namespace AccesoDatos
         }
 
 
+    
+
+     public DataTable ReporteListadoVotantes()
+        {
+            DataTable tabla = new DataTable();
+
+            using (SqlConnection cn =
+                conexionBDD.ObtenerConexion())
+            {
+                SqlCommand cmd =
+                    new SqlCommand("ReporteListadoVotantes",  cn);
+
+                cmd.CommandType =  CommandType.StoredProcedure;
+
+                SqlDataAdapter da =  new SqlDataAdapter(cmd);
+
+                da.Fill(tabla);
+            }
+
+            return tabla;
+        }
     }
 }
   

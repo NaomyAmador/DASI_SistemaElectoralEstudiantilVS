@@ -2,6 +2,7 @@
 using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using static System.Collections.Specialized.BitVector32;
 
 namespace LogicaNegocio
@@ -185,22 +186,25 @@ namespace LogicaNegocio
 
             return operaciones.ActualizarUsuario(usuario);
         }
-    
-    public bool ConvertirUsuarioAdmin(int usuarioID)
+
+        public bool ConvertirUsuarioAdmin(int usuarioID)
 
         {
-          return operaciones.ConvertirUsuarioAdmin(usuarioID);
+            return operaciones.ConvertirUsuarioAdmin(usuarioID);
         }
 
-        public bool QuitarAdmin( int usuarioID)
+        public bool QuitarAdmin(int usuarioID)
         {
-                     return operaciones.QuitarAdmin( usuarioID);
+            return operaciones.QuitarAdmin(usuarioID);
         }
 
+            
+    public DataTable ReporteListadoVotantes()
+        {
+            return operaciones.ReporteListadoVotantes();
+        }
 
 
     }
-
-
 
 }

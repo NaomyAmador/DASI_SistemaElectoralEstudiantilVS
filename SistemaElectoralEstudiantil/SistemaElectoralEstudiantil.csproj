@@ -187,16 +187,37 @@
     <Compile Include="FrmVotaciones.Designer.cs">
       <DependentUpon>FrmVotaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteIntegrantesdelpartido.cs">
+    <Compile Include="Reportes\FrmReporteListadoVotantes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteIntegrantesdelpartido.Designer.cs">
+    <Compile Include="Reportes\FrmReporteListadoVotantes.Designer.cs">
+      <DependentUpon>FrmReporteListadoVotantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteIntegrantesdelpartido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteIntegrantesdelpartido.Designer.cs">
       <DependentUpon>ReporteIntegrantesdelpartido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\SistemaVotacionEscolarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaVotacionEscolarDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SistemaVotacionEscolarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaVotacionEscolarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaVotacionEscolarDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaVotacionEscolarDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaVotacionEscolarDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaVotacionEscolarDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="VerDatosUser.cs">
@@ -238,9 +259,13 @@
       <DependentUpon>FrmVotaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteCandidatos.rdlc" />
-    <EmbeddedResource Include="ReporteIntegrantesdelpartido.resx">
+    <EmbeddedResource Include="Reportes\FrmReporteListadoVotantes.resx">
+      <DependentUpon>FrmReporteListadoVotantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteIntegrantesdelpartido.resx">
       <DependentUpon>ReporteIntegrantesdelpartido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteListadoVotantes.rdlc" />
     <EmbeddedResource Include="VerDatosUser.resx">
       <DependentUpon>VerDatosUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +297,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reportes\SistemaVotacionEscolarDataSet.xsc">
+      <DependentUpon>SistemaVotacionEscolarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\SistemaVotacionEscolarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaVotacionEscolarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\SistemaVotacionEscolarDataSet.xss">
+      <DependentUpon>SistemaVotacionEscolarDataSet.xsd</DependentUpon>
+    </None>
     <None Include="SistemaVotacionEscolarDataSet.xsc">
       <DependentUpon>SistemaVotacionEscolarDataSet.xsd</DependentUpon>
     </None>
@@ -282,6 +318,28 @@
     </None>
     <None Include="SistemaVotacionEscolarDataSet.xss">
       <DependentUpon>SistemaVotacionEscolarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaVotacionEscolarDataSet1.xsc">
+      <DependentUpon>SistemaVotacionEscolarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaVotacionEscolarDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaVotacionEscolarDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaVotacionEscolarDataSet1.xss">
+      <DependentUpon>SistemaVotacionEscolarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaVotacionEscolarDataSet2.xsc">
+      <DependentUpon>SistemaVotacionEscolarDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaVotacionEscolarDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaVotacionEscolarDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaVotacionEscolarDataSet2.xss">
+      <DependentUpon>SistemaVotacionEscolarDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

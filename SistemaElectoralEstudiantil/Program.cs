@@ -1,4 +1,5 @@
 ﻿using SistemaElectoralEstudiantil.Principal;
+using SistemaElectoralEstudiantil.Reportes;
 using System;
 using System.Windows.Forms;
 
@@ -14,7 +15,7 @@ namespace SistemaElectoralEstudiantil
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReporteIntegrantesdelpartido());
+            Application.Run(new FrmReporteListadoVotantes());
         }
     }
 }

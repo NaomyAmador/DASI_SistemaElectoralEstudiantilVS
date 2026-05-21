@@ -17,8 +17,8 @@ namespace SistemaElectoralEstudiantil
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Votaciones.frm_PanelVotaciones());
            //Application.Run(new EditarPlanchaYCandidato.GestionPlancha());
-            Application.Run(new GestionCandidatos()); 
-            // Application.Run(new CrearPlancha());
+            //Application.Run(new GestionCandidatos()); 
+            Application.Run(new CrearPlancha());
         }
     }
 }

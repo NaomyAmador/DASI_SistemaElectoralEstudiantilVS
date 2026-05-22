@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,5 +23,6 @@ namespace Entidades
         public bool Activo { get; set; }
         public int RolID { get; set; }
         public int PadronID { get; set; }
+
     }
 }

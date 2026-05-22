@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Planchas
     {
-        public int PlanchaID { get; set; }
+        public int PlanchaID {  get; set; }
         public string NombrePlancha { get; set; }
         public byte[] Logo { get; set; }
         public string Descripcion { get; set; }

@@ -8,11 +8,13 @@ namespace Entidades
 {
     public class Candidatos
     {
+
         public int CandidatoID { get; set; } 
         public int PlanchaID { get; set; }
         public string Nombre { get; set; } 
         public string Cargo { get; set; } 
-        public int Edad {  get; set; } 
+        public int  Edad {  get; set; } //? luego de la t del int
         public string Descripcion { get; set; } 
     }
+
 }

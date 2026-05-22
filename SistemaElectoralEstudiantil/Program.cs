@@ -1,5 +1,7 @@
-﻿using SistemaElectoralEstudiantil.EditarPlanchaYCandidato;
+using SistemaElectoralEstudiantil.EditarPlanchaYCandidato;
 using SistemaElectoralEstudiantil.Principal;
+using SistemaElectoralEstudiantil.Principal;
+using SistemaElectoralEstudiantil.Reportes;
 using System;
 using System.Windows.Forms;
 
@@ -19,6 +21,7 @@ namespace SistemaElectoralEstudiantil
            //Application.Run(new EditarPlanchaYCandidato.GestionPlancha());
             //Application.Run(new GestionCandidatos()); 
             Application.Run(new CrearPlancha());
+            //Application.Run(new FrmReporteListadoVotantes());
         }
     }
 }

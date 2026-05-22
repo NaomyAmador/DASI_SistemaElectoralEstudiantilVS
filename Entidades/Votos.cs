@@ -14,5 +14,6 @@ namespace Entidades
         public int VotacionID { get; set; } 
         public DateTime FechaHora { get; set; } 
         public bool EsNulo {  get; set; }
+
     }
 }

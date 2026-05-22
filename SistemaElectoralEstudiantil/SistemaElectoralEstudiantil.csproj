@@ -85,6 +85,7 @@
     </Compile>
     <Compile Include="Menu\MenuVotante.Designer.cs">
       <DependentUpon>MenuVotante.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatosPlancha\FrmDatosPlancha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +132,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\MenuVotante.resx">
       <DependentUpon>MenuVotante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatosPlancha\FrmDatosPlancha.resx">
       <DependentUpon>FrmDatosPlancha.cs</DependentUpon>
     </EmbeddedResource>

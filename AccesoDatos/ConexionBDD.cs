@@ -9,15 +9,15 @@ namespace AccesoDatos
 {
     public class ConexionBDD
     {
+
         private string CadenaConexion = "server=DESKTOP-BF73E8O\\SQLEXPRESS; database=SistemaVotacionEscolar; integrated security=true;";
-        //Servidor Naomy Amador: DESKTOP-BF73E8O\SQLEXPRESS
-        //Servidor Arianna Cedeño: LAPTOP-PHTCMGVS\SQLEXPRESS
+        //Servidor Naomy Amador: LAPTOP-9G07MQQC\SQLEXPRESS
+        //Servidor Arianna Cedeño: DESKTOP-BF73E8O\\SQLEXPRESS
         //Servidor Lía Torres: LILY\SQLEXPRESS
 
         public SqlConnection ObtenerConexion()
         {
             SqlConnection Conexion = new SqlConnection(CadenaConexion);
-            Conexion.Open();
             return Conexion;
         }
     }

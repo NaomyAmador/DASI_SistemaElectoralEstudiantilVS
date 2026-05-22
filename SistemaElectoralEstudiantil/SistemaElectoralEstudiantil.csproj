@@ -85,6 +85,23 @@
     </Compile>
     <Compile Include="Menu\MenuVotante.Designer.cs">
       <DependentUpon>MenuVotante.cs</DependentUpon>
+    <Compile Include="DatosPlancha\FrmDatosPlancha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosPlancha\FrmDatosPlancha.Designer.cs">
+      <DependentUpon>FrmDatosPlancha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FolderPrueba\FrmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FolderPrueba\FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FolderPrueba\FrmVotante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FolderPrueba\FrmVotante.Designer.cs">
+      <DependentUpon>FrmVotante.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -114,6 +131,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\MenuVotante.resx">
       <DependentUpon>MenuVotante.cs</DependentUpon>
+    <EmbeddedResource Include="DatosPlancha\FrmDatosPlancha.resx">
+      <DependentUpon>FrmDatosPlancha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FolderPrueba\FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FolderPrueba\FrmVotante.resx">
+      <DependentUpon>FrmVotante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

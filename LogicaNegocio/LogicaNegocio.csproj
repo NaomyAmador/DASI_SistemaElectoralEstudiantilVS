@@ -168,17 +168,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="LogicaNegocioPlancha.cs" />
     <Compile Include="LogicaNegocioVotacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioNegocio.cs" />
-=======
     <Compile Include="LogicaNegocioUsuario.cs" />
     <Compile Include="LogicaNegocioVotaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
->>>>>>> origin/RamaLia
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">

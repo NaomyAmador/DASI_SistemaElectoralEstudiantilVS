@@ -41,6 +41,7 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.btn_CambiarLogo = new System.Windows.Forms.Button();
             this.cB_PlanchaActiva = new System.Windows.Forms.CheckBox();
+            this.btn_VolverMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Planchas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +105,7 @@
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(43, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 28);
+            this.label3.Size = new System.Drawing.Size(150, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nombre Plancha:";
             // 
@@ -114,7 +115,7 @@
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(43, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 28);
+            this.label4.Size = new System.Drawing.Size(111, 22);
             this.label4.TabIndex = 7;
             this.label4.Text = "Descripción:";
             // 
@@ -174,11 +175,23 @@
             this.cB_PlanchaActiva.Text = "Plancha Activa";
             this.cB_PlanchaActiva.UseVisualStyleBackColor = true;
             // 
+            // btn_VolverMenu
+            // 
+            this.btn_VolverMenu.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VolverMenu.Location = new System.Drawing.Point(808, 728);
+            this.btn_VolverMenu.Name = "btn_VolverMenu";
+            this.btn_VolverMenu.Size = new System.Drawing.Size(235, 39);
+            this.btn_VolverMenu.TabIndex = 35;
+            this.btn_VolverMenu.Text = "Volver al Menú";
+            this.btn_VolverMenu.UseVisualStyleBackColor = true;
+            this.btn_VolverMenu.Click += new System.EventHandler(this.btn_VolverMenu_Click);
+            // 
             // GestionPlancha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 729);
+            this.ClientSize = new System.Drawing.Size(1073, 804);
+            this.Controls.Add(this.btn_VolverMenu);
             this.Controls.Add(this.cB_PlanchaActiva);
             this.Controls.Add(this.btn_CambiarLogo);
             this.Controls.Add(this.picLogo);
@@ -217,5 +230,6 @@
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btn_CambiarLogo;
         private System.Windows.Forms.CheckBox cB_PlanchaActiva;
+        private System.Windows.Forms.Button btn_VolverMenu;
     }
 }

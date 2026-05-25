@@ -61,6 +61,7 @@
             this.btn_ActualizarDatos = new System.Windows.Forms.Button();
             this.tm_Actualizar = new System.Windows.Forms.Timer(this.components);
             this.lbl_TiempoRes = new System.Windows.Forms.Label();
+            this.btn_VolverMenu = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Barras)).BeginInit();
@@ -90,7 +91,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 71);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -330,10 +330,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(523, 25);
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(486, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(260, 30);
+            this.label4.Size = new System.Drawing.Size(341, 38);
             this.label4.TabIndex = 24;
             this.label4.Text = "Panel de Votaciones";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -342,9 +342,9 @@
             // 
             this.btn_ActualizarDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_ActualizarDatos.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ActualizarDatos.Location = new System.Drawing.Point(1017, 792);
+            this.btn_ActualizarDatos.Location = new System.Drawing.Point(852, 792);
             this.btn_ActualizarDatos.Name = "btn_ActualizarDatos";
-            this.btn_ActualizarDatos.Size = new System.Drawing.Size(265, 43);
+            this.btn_ActualizarDatos.Size = new System.Drawing.Size(188, 43);
             this.btn_ActualizarDatos.TabIndex = 23;
             this.btn_ActualizarDatos.Text = "Refrescar Resultados";
             this.btn_ActualizarDatos.UseVisualStyleBackColor = true;
@@ -368,12 +368,26 @@
             this.lbl_TiempoRes.Text = "00:00:00";
             this.lbl_TiempoRes.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // btn_VolverMenu
+            // 
+            this.btn_VolverMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_VolverMenu.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VolverMenu.Location = new System.Drawing.Point(1068, 792);
+            this.btn_VolverMenu.Name = "btn_VolverMenu";
+            this.btn_VolverMenu.Size = new System.Drawing.Size(192, 43);
+            this.btn_VolverMenu.TabIndex = 26;
+            this.btn_VolverMenu.Text = "Volver al Menú";
+            this.btn_VolverMenu.UseVisualStyleBackColor = true;
+            this.btn_VolverMenu.Click += new System.EventHandler(this.btn_VolverMenu_Click);
+            // 
             // frm_PanelVotaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1306, 847);
+            this.Controls.Add(this.btn_VolverMenu);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btn_ActualizarDatos);
             this.Controls.Add(this.lbl_TiempoRes);
@@ -382,7 +396,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPanelVotaciones_FormClosing);
             this.Load += new System.EventHandler(this.PanelVotaciones_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart_Barras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Pastel)).EndInit();
@@ -426,6 +439,6 @@
         private System.Windows.Forms.Button btn_ActualizarDatos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_TiempoRes;
-
+        private System.Windows.Forms.Button btn_VolverMenu;
     }
 }

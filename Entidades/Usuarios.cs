@@ -19,6 +19,7 @@ namespace Entidades
         public string Curso { get; set; }
         public string Seccion { get; set; }
         public bool YaVoto { get; set; }
+
         [System.ComponentModel.Browsable(false)]
         public bool Activo { get; set; }
         public int RolID { get; set; }

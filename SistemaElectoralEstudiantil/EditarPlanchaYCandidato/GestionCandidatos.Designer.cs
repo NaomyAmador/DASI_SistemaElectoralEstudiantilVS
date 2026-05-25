@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cb_PlanchaAsociada = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btn_VolverMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Candidatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -202,11 +203,23 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "Edad:";
             // 
+            // btn_VolverMenu
+            // 
+            this.btn_VolverMenu.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VolverMenu.Location = new System.Drawing.Point(893, 776);
+            this.btn_VolverMenu.Name = "btn_VolverMenu";
+            this.btn_VolverMenu.Size = new System.Drawing.Size(235, 39);
+            this.btn_VolverMenu.TabIndex = 34;
+            this.btn_VolverMenu.Text = "Volver al Menú";
+            this.btn_VolverMenu.UseVisualStyleBackColor = true;
+            this.btn_VolverMenu.Click += new System.EventHandler(this.btn_VolverMenu_Click);
+            // 
             // GestionCandidatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 764);
+            this.ClientSize = new System.Drawing.Size(1173, 837);
+            this.Controls.Add(this.btn_VolverMenu);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cb_PlanchaAsociada);
             this.Controls.Add(this.label6);
@@ -250,5 +263,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cb_PlanchaAsociada;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_VolverMenu;
     }
 }

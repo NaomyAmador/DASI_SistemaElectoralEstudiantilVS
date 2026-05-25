@@ -95,5 +95,12 @@ namespace SistemaElectoralEstudiantil.Principal
                 Btn_VerPassword.BringToFront();
             }
         }
+
+        private void btn_Registrate_Click(object sender, EventArgs e)
+        {
+            RegistrarUsuario registrarUsuario = new RegistrarUsuario();
+            registrarUsuario.Show();
+            this.Hide();
+        }
     }
 }

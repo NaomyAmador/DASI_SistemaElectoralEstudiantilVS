@@ -196,6 +196,12 @@ namespace SistemaElectoralEstudiantil
                 MessageBox.Show("Candidato actualizado con éxito en la lista temporal.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btn_Menu_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
     }
     
 }

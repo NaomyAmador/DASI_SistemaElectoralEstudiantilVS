@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_CrearCandidato = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.txt_NombrePlancha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_ActualizarCandi = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.btn_AgregarCandi = new System.Windows.Forms.Button();
             this.txt_DescriCandi = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             this.btn_GuardarPlancha = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_ActualizarCandi = new System.Windows.Forms.Button();
+            this.btn_Menu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CrearCandidato)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -68,14 +68,6 @@
             // dgv_CrearCandidato
             // 
             this.dgv_CrearCandidato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_CrearCandidato.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_CrearCandidato.Location = new System.Drawing.Point(32, 416);
             this.dgv_CrearCandidato.Name = "dgv_CrearCandidato";
             this.dgv_CrearCandidato.RowHeadersWidth = 51;
@@ -239,6 +231,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Integrantes y Puestos";
             // 
+            // btn_ActualizarCandi
+            // 
+            this.btn_ActualizarCandi.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ActualizarCandi.Location = new System.Drawing.Point(290, 314);
+            this.btn_ActualizarCandi.Name = "btn_ActualizarCandi";
+            this.btn_ActualizarCandi.Size = new System.Drawing.Size(243, 36);
+            this.btn_ActualizarCandi.TabIndex = 21;
+            this.btn_ActualizarCandi.Text = "Actualizar Candidato";
+            this.btn_ActualizarCandi.UseVisualStyleBackColor = true;
+            this.btn_ActualizarCandi.Click += new System.EventHandler(this.btn_ActualizarCandi_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -351,7 +354,7 @@
             // btn_GuardarPlancha
             // 
             this.btn_GuardarPlancha.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GuardarPlancha.Location = new System.Drawing.Point(311, 794);
+            this.btn_GuardarPlancha.Location = new System.Drawing.Point(172, 794);
             this.btn_GuardarPlancha.Name = "btn_GuardarPlancha";
             this.btn_GuardarPlancha.Size = new System.Drawing.Size(338, 36);
             this.btn_GuardarPlancha.TabIndex = 16;
@@ -362,7 +365,7 @@
             // btn_Cancelar
             // 
             this.btn_Cancelar.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(690, 794);
+            this.btn_Cancelar.Location = new System.Drawing.Point(536, 794);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(221, 36);
             this.btn_Cancelar.TabIndex = 17;
@@ -377,22 +380,23 @@
             this.panel1.Size = new System.Drawing.Size(1210, 51);
             this.panel1.TabIndex = 18;
             // 
-            // btn_ActualizarCandi
+            // btn_Menu
             // 
-            this.btn_ActualizarCandi.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ActualizarCandi.Location = new System.Drawing.Point(290, 314);
-            this.btn_ActualizarCandi.Name = "btn_ActualizarCandi";
-            this.btn_ActualizarCandi.Size = new System.Drawing.Size(243, 36);
-            this.btn_ActualizarCandi.TabIndex = 21;
-            this.btn_ActualizarCandi.Text = "Actualizar Candidato";
-            this.btn_ActualizarCandi.UseVisualStyleBackColor = true;
-            this.btn_ActualizarCandi.Click += new System.EventHandler(this.btn_ActualizarCandi_Click);
+            this.btn_Menu.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Menu.Location = new System.Drawing.Point(782, 794);
+            this.btn_Menu.Name = "btn_Menu";
+            this.btn_Menu.Size = new System.Drawing.Size(221, 36);
+            this.btn_Menu.TabIndex = 19;
+            this.btn_Menu.Text = "Volver al Menú";
+            this.btn_Menu.UseVisualStyleBackColor = true;
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // CrearPlancha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 842);
+            this.Controls.Add(this.btn_Menu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_GuardarPlancha);
@@ -445,5 +449,6 @@
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_ActualizarCandi;
+        private System.Windows.Forms.Button btn_Menu;
     }
 }

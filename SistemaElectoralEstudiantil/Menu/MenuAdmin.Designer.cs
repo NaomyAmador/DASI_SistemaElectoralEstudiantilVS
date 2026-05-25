@@ -35,19 +35,25 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_CreacionPlancha = new System.Windows.Forms.Button();
+            this.btn_PanelVotaciones = new System.Windows.Forms.Button();
+            this.btn_Votaciones = new System.Windows.Forms.Button();
+            this.btn_DatosPartido = new System.Windows.Forms.Button();
+            this.btn_Reportes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.btn_DatosUsuario = new System.Windows.Forms.Button();
+            this.btn_GestionPlanchas = new System.Windows.Forms.Button();
+            this.btn_GestionCandidatos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -103,65 +109,66 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(852, 119);
+            this.label2.Location = new System.Drawing.Point(1050, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(273, 38);
             this.label2.TabIndex = 2;
             this.label2.Text = "Menú Principal";
             // 
-            // button1
+            // btn_CreacionPlancha
             // 
-            this.button1.Location = new System.Drawing.Point(82, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 29);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_CreacionPlancha.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CreacionPlancha.Location = new System.Drawing.Point(56, 330);
+            this.btn_CreacionPlancha.Name = "btn_CreacionPlancha";
+            this.btn_CreacionPlancha.Size = new System.Drawing.Size(174, 29);
+            this.btn_CreacionPlancha.TabIndex = 7;
+            this.btn_CreacionPlancha.Text = "Creación de Planchas";
+            this.btn_CreacionPlancha.UseVisualStyleBackColor = true;
+            this.btn_CreacionPlancha.Click += new System.EventHandler(this.btn_CreacionPlancha_Click);
             // 
-            // button2
+            // btn_PanelVotaciones
             // 
-            this.button2.Location = new System.Drawing.Point(310, 330);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 29);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_PanelVotaciones.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PanelVotaciones.Location = new System.Drawing.Point(22, 534);
+            this.btn_PanelVotaciones.Name = "btn_PanelVotaciones";
+            this.btn_PanelVotaciones.Size = new System.Drawing.Size(234, 29);
+            this.btn_PanelVotaciones.TabIndex = 8;
+            this.btn_PanelVotaciones.Text = "Estadísticas de las Votaciones";
+            this.btn_PanelVotaciones.UseVisualStyleBackColor = true;
+            this.btn_PanelVotaciones.Click += new System.EventHandler(this.btn_PanelVotaciones_Click);
             // 
-            // button3
+            // btn_Votaciones
             // 
-            this.button3.Location = new System.Drawing.Point(531, 330);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 29);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Votaciones.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Votaciones.Location = new System.Drawing.Point(531, 330);
+            this.btn_Votaciones.Name = "btn_Votaciones";
+            this.btn_Votaciones.Size = new System.Drawing.Size(128, 29);
+            this.btn_Votaciones.TabIndex = 9;
+            this.btn_Votaciones.Text = "Votaciones";
+            this.btn_Votaciones.UseVisualStyleBackColor = true;
+            this.btn_Votaciones.Click += new System.EventHandler(this.btn_Votaciones_Click);
             // 
-            // button4
+            // btn_DatosPartido
             // 
-            this.button4.Location = new System.Drawing.Point(82, 534);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 29);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_DatosPartido.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DatosPartido.Location = new System.Drawing.Point(287, 330);
+            this.btn_DatosPartido.Name = "btn_DatosPartido";
+            this.btn_DatosPartido.Size = new System.Drawing.Size(157, 29);
+            this.btn_DatosPartido.TabIndex = 11;
+            this.btn_DatosPartido.Text = "Datos del Partido";
+            this.btn_DatosPartido.UseVisualStyleBackColor = true;
+            this.btn_DatosPartido.Click += new System.EventHandler(this.btn_DatosPartido_Click);
             // 
-            // button5
+            // btn_Reportes
             // 
-            this.button5.Location = new System.Drawing.Point(310, 534);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 29);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(531, 534);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(128, 29);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_Reportes.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reportes.Location = new System.Drawing.Point(304, 534);
+            this.btn_Reportes.Name = "btn_Reportes";
+            this.btn_Reportes.Size = new System.Drawing.Size(128, 29);
+            this.btn_Reportes.TabIndex = 12;
+            this.btn_Reportes.Text = "Reportes";
+            this.btn_Reportes.UseVisualStyleBackColor = true;
+            this.btn_Reportes.Click += new System.EventHandler(this.btn_Reportes_Click);
             // 
             // label1
             // 
@@ -174,18 +181,71 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Menú Principal";
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(738, 162);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(169, 163);
+            this.pictureBox7.TabIndex = 14;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(738, 365);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(169, 163);
+            this.pictureBox8.TabIndex = 15;
+            this.pictureBox8.TabStop = false;
+            // 
+            // btn_DatosUsuario
+            // 
+            this.btn_DatosUsuario.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DatosUsuario.Location = new System.Drawing.Point(732, 330);
+            this.btn_DatosUsuario.Name = "btn_DatosUsuario";
+            this.btn_DatosUsuario.Size = new System.Drawing.Size(175, 29);
+            this.btn_DatosUsuario.TabIndex = 16;
+            this.btn_DatosUsuario.Text = "Datos de los Usuarios";
+            this.btn_DatosUsuario.UseVisualStyleBackColor = true;
+            this.btn_DatosUsuario.Click += new System.EventHandler(this.btn_DatosUsuario_Click);
+            // 
+            // btn_GestionPlanchas
+            // 
+            this.btn_GestionPlanchas.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GestionPlanchas.Location = new System.Drawing.Point(513, 534);
+            this.btn_GestionPlanchas.Name = "btn_GestionPlanchas";
+            this.btn_GestionPlanchas.Size = new System.Drawing.Size(169, 29);
+            this.btn_GestionPlanchas.TabIndex = 18;
+            this.btn_GestionPlanchas.Text = "Gestión de Planchas";
+            this.btn_GestionPlanchas.UseVisualStyleBackColor = true;
+            this.btn_GestionPlanchas.Click += new System.EventHandler(this.btn_GestionPlanchas_Click);
+            // 
+            // btn_GestionCandidatos
+            // 
+            this.btn_GestionCandidatos.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GestionCandidatos.Location = new System.Drawing.Point(738, 534);
+            this.btn_GestionCandidatos.Name = "btn_GestionCandidatos";
+            this.btn_GestionCandidatos.Size = new System.Drawing.Size(173, 29);
+            this.btn_GestionCandidatos.TabIndex = 19;
+            this.btn_GestionCandidatos.Text = "Gestión de Candidatos";
+            this.btn_GestionCandidatos.UseVisualStyleBackColor = true;
+            this.btn_GestionCandidatos.Click += new System.EventHandler(this.btn_GestionCandidatos_Click);
+            // 
             // MenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 725);
+            this.ClientSize = new System.Drawing.Size(1454, 725);
+            this.Controls.Add(this.btn_GestionCandidatos);
+            this.Controls.Add(this.btn_GestionPlanchas);
+            this.Controls.Add(this.btn_DatosUsuario);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Reportes);
+            this.Controls.Add(this.btn_DatosPartido);
+            this.Controls.Add(this.btn_Votaciones);
+            this.Controls.Add(this.btn_PanelVotaciones);
+            this.Controls.Add(this.btn_CreacionPlancha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -201,6 +261,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,12 +276,16 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_CreacionPlancha;
+        private System.Windows.Forms.Button btn_PanelVotaciones;
+        private System.Windows.Forms.Button btn_Votaciones;
+        private System.Windows.Forms.Button btn_DatosPartido;
+        private System.Windows.Forms.Button btn_Reportes;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button btn_DatosUsuario;
+        private System.Windows.Forms.Button btn_GestionPlanchas;
+        private System.Windows.Forms.Button btn_GestionCandidatos;
     }
 }

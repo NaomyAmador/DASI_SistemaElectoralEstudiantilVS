@@ -15,6 +15,7 @@ namespace Entidades
         public string Cargo { get; set; } 
         public int  Edad {  get; set; } //? luego de la t del int
         public string Descripcion { get; set; } 
+        public string NombrePlancha {  get; set; }
     }
 
 }

@@ -396,6 +396,12 @@ namespace SistemaElectoralEstudiantil.Votaciones
         {
             tm_Actualizar.Stop();
         }
+
+        private void btn_VolverMenu_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
     }
     
 }

@@ -184,5 +184,11 @@ namespace SistemaElectoralEstudiantil.EditarPlanchaYCandidato
                 }
             }
         }
+
+        private void btn_VolverMenu_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
     }
 }

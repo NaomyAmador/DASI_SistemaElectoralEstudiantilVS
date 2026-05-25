@@ -1,4 +1,5 @@
 ﻿using LogicaNegocio;
+using SistemaElectoralEstudiantil.Principal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -103,6 +104,13 @@ namespace SistemaElectoralEstudiantil
             {
                 MessageBox.Show( ex.Message);
             }
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            FrmLogin Login = new FrmLogin();
+            Login.Show();
+            this.Hide();
         }
     }
 }

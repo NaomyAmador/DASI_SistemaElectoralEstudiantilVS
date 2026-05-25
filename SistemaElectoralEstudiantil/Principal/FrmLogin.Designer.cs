@@ -54,6 +54,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btn_Registrate = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -202,11 +206,11 @@
             // Btn_IniciarSesión
             // 
             this.Btn_IniciarSesión.BackColor = System.Drawing.Color.Chocolate;
-            this.Btn_IniciarSesión.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_IniciarSesión.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_IniciarSesión.ForeColor = System.Drawing.Color.White;
-            this.Btn_IniciarSesión.Location = new System.Drawing.Point(217, 324);
+            this.Btn_IniciarSesión.Location = new System.Drawing.Point(91, 319);
             this.Btn_IniciarSesión.Name = "Btn_IniciarSesión";
-            this.Btn_IniciarSesión.Size = new System.Drawing.Size(189, 40);
+            this.Btn_IniciarSesión.Size = new System.Drawing.Size(158, 40);
             this.Btn_IniciarSesión.TabIndex = 13;
             this.Btn_IniciarSesión.Text = "Iniciar Sesión";
             this.Btn_IniciarSesión.UseVisualStyleBackColor = false;
@@ -282,7 +286,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Chocolate;
-            this.label3.Location = new System.Drawing.Point(171, 322);
+            this.label3.Location = new System.Drawing.Point(46, 317);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 40);
             this.label3.TabIndex = 20;
@@ -293,7 +297,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Chocolate;
-            this.label4.Location = new System.Drawing.Point(411, 322);
+            this.label4.Location = new System.Drawing.Point(255, 313);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 40);
             this.label4.TabIndex = 21;
@@ -310,12 +314,62 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Chocolate;
+            this.label6.Location = new System.Drawing.Point(545, 317);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 40);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "◉";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Chocolate;
+            this.label7.Location = new System.Drawing.Point(336, 317);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 40);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "◉";
+            // 
+            // btn_Registrate
+            // 
+            this.btn_Registrate.BackColor = System.Drawing.Color.Chocolate;
+            this.btn_Registrate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Registrate.ForeColor = System.Drawing.Color.White;
+            this.btn_Registrate.Location = new System.Drawing.Point(381, 317);
+            this.btn_Registrate.Name = "btn_Registrate";
+            this.btn_Registrate.Size = new System.Drawing.Size(158, 40);
+            this.btn_Registrate.TabIndex = 26;
+            this.btn_Registrate.Text = "Registrate";
+            this.btn_Registrate.UseVisualStyleBackColor = false;
+            this.btn_Registrate.Click += new System.EventHandler(this.btn_Registrate_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 6F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Maroon;
+            this.label8.Location = new System.Drawing.Point(384, 299);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(158, 15);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Si no tienes usuario¡Registrate!";
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(617, 460);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btn_Registrate);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -372,5 +426,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_Registrate;
+        private System.Windows.Forms.Label label8;
     }
 }

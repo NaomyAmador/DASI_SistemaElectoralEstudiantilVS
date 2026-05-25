@@ -11,6 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaNegocio", "LogicaNegocio\LogicaNegocio.csproj", "{199BD7C0-4133-48C2-9C72-872F16C7127E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1)AccesoDatos", "1)AccesoDatos", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2)LogicaNegocio", "2)LogicaNegocio", "{EFB5B5B5-A39A-469E-9713-1D2C6B88F012}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3)Presentacion", "3)Presentacion", "{B0CBEB8E-5751-4DD9-88CB-875E59898476}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4)Entidades", "4)Entidades", "{AF43A668-BE8B-4CC4-8008-37F9DC9BC277}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +44,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4E0FBFD-8DBC-4373-804B-D8B194471EB7} = {B0CBEB8E-5751-4DD9-88CB-875E59898476}
+		{703ADEED-37F0-4C75-80E9-8B582C393E7D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{E279AEFB-F5CE-42B5-B5F7-212A2CEDF0D5} = {AF43A668-BE8B-4CC4-8008-37F9DC9BC277}
+		{199BD7C0-4133-48C2-9C72-872F16C7127E} = {EFB5B5B5-A39A-469E-9713-1D2C6B88F012}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8076788-E9B3-46DE-A051-9AFB02E75AFD}

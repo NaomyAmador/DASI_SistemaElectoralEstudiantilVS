@@ -83,7 +83,7 @@
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración1.ForeColor = System.Drawing.Color.Peru;
             this.Lbl_Decoración1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Lbl_Decoración1.Location = new System.Drawing.Point(289, 10);
+            this.Lbl_Decoración1.Location = new System.Drawing.Point(310, -1);
             this.Lbl_Decoración1.Name = "Lbl_Decoración1";
             this.Lbl_Decoración1.Size = new System.Drawing.Size(140, 14);
             this.Lbl_Decoración1.TabIndex = 2;
@@ -92,11 +92,11 @@
             // Lbl_Decoración2
             // 
             this.Lbl_Decoración2.AutoSize = true;
-            this.Lbl_Decoración2.Font = new System.Drawing.Font("Papillion PERSONAL USE ONLY", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración2.ForeColor = System.Drawing.Color.Chocolate;
             this.Lbl_Decoración2.Location = new System.Drawing.Point(194, 23);
             this.Lbl_Decoración2.Name = "Lbl_Decoración2";
-            this.Lbl_Decoración2.Size = new System.Drawing.Size(341, 81);
+            this.Lbl_Decoración2.Size = new System.Drawing.Size(377, 32);
             this.Lbl_Decoración2.TabIndex = 3;
             this.Lbl_Decoración2.Text = "Sistema Electoral Estudiantil";
             // 
@@ -114,11 +114,11 @@
             // Lbl_Decoración4
             // 
             this.Lbl_Decoración4.AutoSize = true;
-            this.Lbl_Decoración4.Font = new System.Drawing.Font("Papillion PERSONAL USE ONLY", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración4.ForeColor = System.Drawing.Color.Sienna;
             this.Lbl_Decoración4.Location = new System.Drawing.Point(231, 100);
             this.Lbl_Decoración4.Name = "Lbl_Decoración4";
-            this.Lbl_Decoración4.Size = new System.Drawing.Size(244, 52);
+            this.Lbl_Decoración4.Size = new System.Drawing.Size(299, 22);
             this.Lbl_Decoración4.TabIndex = 5;
             this.Lbl_Decoración4.Text = "Elige nuestro futuro en un solo lugar";
             // 
@@ -247,7 +247,7 @@
             this.Lbl_ProgressBarTexto.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_ProgressBarTexto.Location = new System.Drawing.Point(17, 380);
             this.Lbl_ProgressBarTexto.Name = "Lbl_ProgressBarTexto";
-            this.Lbl_ProgressBarTexto.Size = new System.Drawing.Size(139, 17);
+            this.Lbl_ProgressBarTexto.Size = new System.Drawing.Size(128, 17);
             this.Lbl_ProgressBarTexto.TabIndex = 17;
             this.Lbl_ProgressBarTexto.Text = "Procesando el Login";
             // 
@@ -284,7 +284,7 @@
             this.label3.ForeColor = System.Drawing.Color.Chocolate;
             this.label3.Location = new System.Drawing.Point(171, 322);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 40);
+            this.label3.Size = new System.Drawing.Size(39, 40);
             this.label3.TabIndex = 20;
             this.label3.Text = "◉";
             // 
@@ -295,7 +295,7 @@
             this.label4.ForeColor = System.Drawing.Color.Chocolate;
             this.label4.Location = new System.Drawing.Point(411, 322);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 40);
+            this.label4.Size = new System.Drawing.Size(39, 40);
             this.label4.TabIndex = 21;
             this.label4.Text = "◉";
             // 
@@ -304,9 +304,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkSalmon;
-            this.label5.Location = new System.Drawing.Point(262, 22);
+            this.label5.Location = new System.Drawing.Point(282, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 17);
+            this.label5.Size = new System.Drawing.Size(188, 17);
             this.label5.TabIndex = 22;
             this.label5.Text = "✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏";
             // 

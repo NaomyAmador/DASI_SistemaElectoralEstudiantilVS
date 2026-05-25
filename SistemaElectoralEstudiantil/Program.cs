@@ -1,6 +1,7 @@
 using SistemaElectoralEstudiantil.EditarPlanchaYCandidato;
 using SistemaElectoralEstudiantil.Principal;
-using SistemaElectoralEstudiantil.Principal;
+using SistemaElectoralEstudiantil.DatosPlancha;
+using SistemaElectoralEstudiantil.Votaciones;
 using SistemaElectoralEstudiantil.Reportes;
 using System;
 using System.Windows.Forms;

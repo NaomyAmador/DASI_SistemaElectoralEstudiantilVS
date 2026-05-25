@@ -234,17 +234,17 @@
     </Compile>
     <Compile Include="FolderPrueba\FrmVotante.Designer.cs">
       <DependentUpon>FrmVotante.cs</DependentUpon>
-    </Compile>  
+    </Compile>
     <Compile Include="ADMINVerDatosTodosUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ADMINVerDatosTodosUsuario.Designer.cs">
       <DependentUpon>ADMINVerDatosTodosUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVotaciones.cs">
+    <Compile Include="Votaciones\FrmVotaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVotaciones.Designer.cs">
+    <Compile Include="Votaciones\FrmVotaciones.Designer.cs">
       <DependentUpon>FrmVotaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\FrmReporteListadoVotantes.cs">
@@ -348,7 +348,7 @@
     <EmbeddedResource Include="ADMINVerDatosTodosUsuario.resx">
       <DependentUpon>ADMINVerDatosTodosUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVotaciones.resx">
+    <EmbeddedResource Include="Votaciones\FrmVotaciones.resx">
       <DependentUpon>FrmVotaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteCandidatos.rdlc" />

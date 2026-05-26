@@ -16,12 +16,13 @@ namespace AccesoDatos
             {
                 using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
                 {
+                
                     SqlCommand usuario = new SqlCommand(
                         @"SELECT UsuarioID, NombreCompleto, Usuario, Matricula, 
                              Curso, Seccion, YaVoto, Activo, RolID, PadronID 
                       FROM Usuarios WHERE UsuarioID = @UsuarioID", Conexion);
-
-                    usuario.Parameters.AddWithValue("@UsuarioID", UsuarioID);
+                   Conexion.Open();
+                usuario.Parameters.AddWithValue("@UsuarioID", UsuarioID);
                     SqlDataReader reader = usuario.ExecuteReader();
 
                     if (reader.Read())

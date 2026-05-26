@@ -17,6 +17,7 @@ namespace SistemaElectoralEstudiantil.Votaciones
 {
     public partial class frm_PanelVotaciones : Form
     {
+        private DateTime fechaFinVotacion;
         private LogicaNegocioVotacion VotacionBLL = new LogicaNegocioVotacion ();
         public frm_PanelVotaciones()
         {
@@ -59,8 +60,15 @@ namespace SistemaElectoralEstudiantil.Votaciones
         }
 
         private void VerificarAccesoYMostrar()
-         {
-            // Si es administrador, ve todo sin restricción
+        {
+
+            if (Sesion.UsuarioActual == null)
+            {
+                MessageBox.Show("No hay sesión activa.");
+                return;
+            }
+
+            // ADMIN
             if (Sesion.EsAdmin)
             {
                 MostrarContenidoCompleto();
@@ -68,25 +76,61 @@ namespace SistemaElectoralEstudiantil.Votaciones
                 return;
             }
 
-            // Si es votante, verificamos si ya votó
-            bool yaVoto = Sesion.UsuarioActual.YaVoto;
+            // CONSULTAR USUARIO ACTUALIZADO
+            LogicaNegocioVotacion logica = new LogicaNegocioVotacion();
 
-            if (yaVoto)
+            Usuarios usuarioActualizado =
+                logica.ObtenerUsuarioPorID(Sesion.UsuarioActual.UsuarioID);
+
+            if (usuarioActualizado != null)
             {
-                // Votante que ya votó: ve información limitada
+                Sesion.UsuarioActual.YaVoto =
+                    usuarioActualizado.YaVoto;
+            }
+
+            // DECISIÓN REAL
+            if (Sesion.UsuarioActual.YaVoto)
+            {
                 MostrarContenidoVotante();
                 CargarDatos();
             }
             else
             {
-                // Votante que NO ha votado: ve pantalla de aviso
                 MostrarPantallaDeAviso();
             }
         }
 
-        // ─────────────────────────────────────────────
-        // Muestra TODO (solo admin)
-        // ─────────────────────────────────────────────
+
+
+
+
+        //    // Si es administrador, ve todo sin restricción
+        //    if (Sesion.EsAdmin)
+        //    {
+        //        MostrarContenidoCompleto();
+        //        CargarDatos();
+        //        return;
+        //    }
+
+            //    // Si es votante, verificamos si ya votó
+            //    bool yaVoto = Sesion.UsuarioActual.YaVoto;
+
+            //    if (yaVoto)
+            //    {
+            //        // Votante que ya votó: ve información limitada
+            //        MostrarContenidoVotante();
+            //        CargarDatos();
+            //    }
+            //    else
+            //    {
+            //        // Votante que NO ha votado: ve pantalla de aviso
+            //        MostrarPantallaDeAviso();
+            //    }
+            //}
+
+            // ─────────────────────────────────────────────
+            // Muestra TODO (solo admin)
+            // ─────────────────────────────────────────────
         private void MostrarContenidoCompleto()
         {
             // Todo visible
@@ -136,7 +180,7 @@ namespace SistemaElectoralEstudiantil.Votaciones
             btn_ActualizarDatos.Visible = false;
 
             // Detener el timer porque no hay nada que actualizar
-            tm_Actualizar.Stop();
+            //tm_Actualizar.Stop();
 
             // Mostrar mensaje de aviso en el centro del form
             // Creamos un label de aviso dinámicamente
@@ -231,6 +275,7 @@ namespace SistemaElectoralEstudiantil.Votaciones
 
             // ── Tiempo restante ──
             ActualizarTiempo(s.TiempoRestante);
+            fechaFinVotacion = DateTime.Now.Add(s.TiempoRestante);
 
             // ── Gráficas ──
             CargarGraficaPastel(s);
@@ -383,24 +428,80 @@ namespace SistemaElectoralEstudiantil.Votaciones
 
         private void tm_Actualizar_Tick(object sender, EventArgs e)
         {
-            if (!Sesion.EsAdmin && !Sesion.UsuarioActual.YaVoto)
+            try
             {
-                LogicaNegocioVotacion logicaVotacion = new LogicaNegocioVotacion();
-                Usuarios usuarioActualizado =
-                    logicaVotacion.ObtenerUsuarioPorID(Sesion.UsuarioActual.UsuarioID);
+                // Actualizar reloj SIEMPRE
+                TimeSpan restante = fechaFinVotacion - DateTime.Now;
 
-                if (usuarioActualizado != null && usuarioActualizado.YaVoto)
+                ActualizarTiempo(restante);
+
+                // ADMIN
+                if (Sesion.EsAdmin)
                 {
-                    Sesion.UsuarioActual.YaVoto = true;
-                    var lblAviso = this.Controls["lblAvisoVoto"];
-                    if (lblAviso != null) this.Controls.Remove(lblAviso);
-                    MostrarContenidoVotante();
-                    CargarDatos();
-                    tm_Actualizar.Start();
+                    return;
                 }
-                return;
+
+                // CONSULTAR USUARIO
+                LogicaNegocioVotacion logica =
+                    new LogicaNegocioVotacion();
+
+                Usuarios usuarioActualizado =
+                    logica.ObtenerUsuarioPorID(
+                        Sesion.UsuarioActual.UsuarioID);
+
+                if (usuarioActualizado != null)
+                {
+                    Sesion.UsuarioActual.YaVoto =
+                        usuarioActualizado.YaVoto;
+
+                    if (Sesion.UsuarioActual.YaVoto)
+                    {
+                        var lblAviso =
+                            this.Controls["lblAvisoVoto"];
+
+                        if (lblAviso != null)
+                            this.Controls.Remove(lblAviso);
+
+                        var btnIr =
+                            this.Controls["btnIrVotar"];
+
+                        if (btnIr != null)
+                            this.Controls.Remove(btnIr);
+
+                        MostrarContenidoVotante();
+
+                        CargarDatos();
+                    }
+                }
             }
-            CargarDatos();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        
+
+
+
+
+
+            //if (!Sesion.EsAdmin && !Sesion.UsuarioActual.YaVoto)
+            //{
+            //    LogicaNegocioVotacion logicaVotacion = new LogicaNegocioVotacion();
+            //    Usuarios usuarioActualizado =
+            //        logicaVotacion.ObtenerUsuarioPorID(Sesion.UsuarioActual.UsuarioID);
+
+            //    if (usuarioActualizado != null && usuarioActualizado.YaVoto)
+            //    {
+            //        Sesion.UsuarioActual.YaVoto = true;
+            //        var lblAviso = this.Controls["lblAvisoVoto"];
+            //        if (lblAviso != null) this.Controls.Remove(lblAviso);
+            //        MostrarContenidoVotante();
+            //        CargarDatos();
+            //        tm_Actualizar.Start();
+            //    }
+            //    return;
+            //}
+            //CargarDatos();
         }
         private void frmPanelVotaciones_FormClosing(object sender, FormClosingEventArgs e)
         {

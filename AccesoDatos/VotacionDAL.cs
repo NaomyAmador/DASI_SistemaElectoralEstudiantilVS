@@ -15,7 +15,9 @@ namespace AccesoDatos
         {
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
-                string Consulta = "SELECT TOP 1 VotacionID, NombreVotacion, FechaInicio, FechaFin, Activa FROM Votacion WHERE Activa = 1 AND GETDATE() BETWEEN FechaInicio AND FechaFin";
+                Conexion.Open();
+                string Consulta = "SELECT TOP 1 * FROM Votacion WHERE Activa = 1";
+                //string Consulta = "SELECT TOP 1 VotacionID, NombreVotacion, FechaInicio, FechaFin, Activa FROM Votacion WHERE Activa = 1 AND GETDATE() BETWEEN FechaInicio AND FechaFin";
                 SqlCommand votacion = new SqlCommand(Consulta, Conexion);
                 SqlDataReader reader = votacion.ExecuteReader();
 
@@ -38,10 +40,11 @@ namespace AccesoDatos
         {
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
+                Conexion.Open();
                 SqlCommand votacion = new SqlCommand(
                     "SELECT COUNT(*) FROM Usuarios WHERE RolID = 2 AND Activo = 1",
                     Conexion);
-                return Convert.ToInt32(votacion.ExecuteNonQuery());
+                return Convert.ToInt32(votacion.ExecuteScalar());
 
             }
         }
@@ -50,6 +53,7 @@ namespace AccesoDatos
         {
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
+                Conexion.Open();
                 SqlCommand votacion = new SqlCommand(
                     "SELECT COUNT(*) FROM Votos WHERE VotacionID = @VotacionID",
                     Conexion);
@@ -63,6 +67,7 @@ namespace AccesoDatos
         {
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
+                Conexion.Open();
                 SqlCommand votacion = new SqlCommand(
                     "SELECT COUNT(*) FROM Votos WHERE PlanchaID = @PlanchaID AND VotacionID = @VotacionID AND EsNulo = 0",
                     Conexion);
@@ -76,6 +81,7 @@ namespace AccesoDatos
         {
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
+                Conexion.Open();
                 SqlCommand votacion = new SqlCommand(
                     "SELECT COUNT(*) FROM Votos WHERE VotacionID = @VotacionID AND EsNulo = 1",
                     Conexion);

@@ -1,5 +1,7 @@
 ﻿using Entidades;
 using LogicaNegocio;
+using SistemaElectoralEstudiantil.FolderPrueba;
+using SistemaElectoralEstudiantil.Menu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -168,6 +170,7 @@ namespace SistemaElectoralEstudiantil.Votaciones
             btnVolver.Click += (s, e) =>
             {
                 FrmVotaciones frm = new FrmVotaciones();
+                frm.Owner = this.Owner;
                 frm.Show();
                 this.Close();
 
@@ -406,7 +409,24 @@ namespace SistemaElectoralEstudiantil.Votaciones
 
         private void btn_VolverMenu_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            if (this.Owner != null)
+            {
+                this.Owner.Show();
+            }
+            else
+            {
+                if (Sesion.UsuarioActual.RolID == 1)
+                {
+                   MenuAdmin admin = new MenuAdmin();
+                    admin.Show();
+                }
+                else
+                {
+                    MenuVotante votante = new MenuVotante();
+                    votante.Show();
+                }
+            }
+
             this.Close();
         }
     }

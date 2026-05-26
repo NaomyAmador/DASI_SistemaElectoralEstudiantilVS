@@ -21,6 +21,7 @@ namespace AccesoDatos
 
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
+                conexion.Open();
                 SqlCommand cmd = new SqlCommand("[MostrarTodosLosUsuarios]", conexion);
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -66,6 +67,7 @@ namespace AccesoDatos
 
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
+                conexion.Open();
                 SqlCommand cmd = new SqlCommand("BuscarUsuariosPorNombre", conexion);
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -113,6 +115,7 @@ namespace AccesoDatos
             Usuarios user = null;
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
+                conexion.Open();
                 SqlCommand cmd = new SqlCommand("MostrarDatosUsuario", conexion);
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -150,6 +153,7 @@ namespace AccesoDatos
             {
                 using (SqlConnection conexion = conexionBDD.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand command = new SqlCommand("RegistrarUsuario", conexion);
 
                     command.CommandType = CommandType.StoredProcedure;
@@ -180,6 +184,7 @@ namespace AccesoDatos
             {
                 using (SqlConnection conexion = conexionBDD.ObtenerConexion())
                 {
+                    conexion.Open();
 
                     SqlCommand command = new SqlCommand("BorrarUsuario", conexion);
 
@@ -208,6 +213,7 @@ namespace AccesoDatos
             {
                 using (SqlConnection conexion = conexionBDD.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand command = new SqlCommand("ActualizarUsuario", conexion);
 
                     command.CommandType = CommandType.StoredProcedure;
@@ -241,6 +247,7 @@ namespace AccesoDatos
             {
                 using (SqlConnection conexion = conexionBDD.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("ConvertirUsuarioAdmin", conexion);
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -265,6 +272,7 @@ namespace AccesoDatos
                 using (SqlConnection conexion =
                     conexionBDD.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("QuitarAdmin", conexion);
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -292,6 +300,7 @@ namespace AccesoDatos
             using (SqlConnection cn =
                 conexionBDD.ObtenerConexion())
             {
+                cn.Open();
                 SqlCommand cmd =
                     new SqlCommand("ReporteListadoVotantes",  cn);
 

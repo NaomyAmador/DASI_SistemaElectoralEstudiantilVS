@@ -322,7 +322,7 @@ namespace SistemaElectoralEstudiantil
         {
             if (Sesion.UsuarioActual.RolID == 1)
             {
-                FrmAdmin menuAdmin = new FrmAdmin();
+                MenuAdmin menuAdmin = new MenuAdmin();
                 menuAdmin.Show();
             }
             else

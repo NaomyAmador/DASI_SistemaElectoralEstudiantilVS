@@ -17,6 +17,8 @@ namespace AccesoDatos
 
             using (SqlConnection cn = conexion.ObtenerConexion())
             {
+                cn.Open();
+
                 SqlCommand cmd = new SqlCommand("MostrarPlanchas", cn);
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -48,8 +50,7 @@ namespace AccesoDatos
 
 
         public List<Candidatos>
-    MostrarCandidatosPorPlancha(
-        string nombrePlancha)
+        MostrarCandidatosPorPlancha(string nombrePlancha)
         {
             List<Candidatos> lista =
                 new List<Candidatos>();
@@ -57,6 +58,7 @@ namespace AccesoDatos
             using (SqlConnection cn =
                 conexion.ObtenerConexion())
             {
+                cn.Open();
                 SqlCommand cmd =
                     new SqlCommand(
                         "MostrarCandidatosPorPlancha",
@@ -113,6 +115,8 @@ namespace AccesoDatos
                 using (SqlConnection cn = conexion.ObtenerConexion())
                 {
                     {
+                        cn.Open();
+
                         SqlCommand cmd = new SqlCommand("VerificarSiUsuarioYaVoto", cn);
 
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -143,6 +147,8 @@ namespace AccesoDatos
                 using (SqlConnection cn = conexion.ObtenerConexion())
                 {
                     {
+                        cn.Open();
+
                         SqlCommand cmd =new SqlCommand("RegistrarVotoPlancha",cn);
 
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -179,6 +185,7 @@ namespace AccesoDatos
                 using (SqlConnection cn = conexion.ObtenerConexion())
                 {
                     {
+                        cn.Open();
                         SqlCommand cmd = new SqlCommand("RegistrarVotoNulo",cn);
 
                         cmd.CommandType =CommandType.StoredProcedure;
@@ -207,6 +214,7 @@ namespace AccesoDatos
             using (SqlConnection cn = conexion.ObtenerConexion())
             {
                 {
+                    cn.Open();
                     SqlCommand cmd = new SqlCommand("VerResultadosVotacion",cn);
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -228,6 +236,8 @@ namespace AccesoDatos
             using (SqlConnection cn = conexion.ObtenerConexion())
             {
                 {
+                    cn.Open();
+
                     SqlCommand cmd = new SqlCommand("ContarVotosNulos",cn);
 
                     cmd.CommandType = CommandType.StoredProcedure;

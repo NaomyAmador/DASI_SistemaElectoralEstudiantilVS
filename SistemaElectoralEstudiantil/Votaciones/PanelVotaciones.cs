@@ -165,9 +165,16 @@ namespace SistemaElectoralEstudiantil.Votaciones
                 (this.ClientSize.Width - 150) / 2,
                 (this.ClientSize.Height - 200) / 2 + 210
             );
-            btnVolver.Click += (s, e) => this.Close();
+            btnVolver.Click += (s, e) =>
+            {
+                FrmVotaciones frm = new FrmVotaciones();
+                frm.Show();
+                this.Close();
+
+            };
             this.Controls.Add(btnVolver);
             btnVolver.BringToFront();
+
         }
 
         // ─────────────────────────────────────────────

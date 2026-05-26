@@ -17,6 +17,7 @@ namespace AccesoDatos
         {
             using(SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
+                Conexion.Open();
                 string Consulta = "SELECT COUNT (*) FROM Planchas WHERE NombrePlancha = @NombrePlancha";
                 SqlCommand nombreplancha = new SqlCommand(Consulta, Conexion);
                 nombreplancha.Parameters.AddWithValue("@NombrePlancha", NombrePlancha);
@@ -30,6 +31,7 @@ namespace AccesoDatos
             List<Planchas> Lista = new List <Planchas>();
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
+                Conexion.Open();
                 string Consulta = "SELECT PlanchaID, NombrePlancha, Logo, Descripcion, Activa FROM Planchas";
                 SqlCommand Planchas = new SqlCommand(Consulta,Conexion);
                 SqlDataReader reader = Planchas.ExecuteReader();
@@ -52,6 +54,7 @@ namespace AccesoDatos
             List<Candidatos> Lista = new List<Candidatos>();
             using (SqlConnection Conexion = conexionBDD.ObtenerConexion())
             {
+                Conexion.Open();
                 string Consulta = "SELECT CandidatoID, PlanchaID, Nombre, Cargo, Edad, Descripcion FROM Candidatos WHERE PlanchaID = @PlanchaID";
                 SqlCommand id = new SqlCommand(Consulta, Conexion);
                 id.Parameters.AddWithValue("@PlanchaID", planchaID);
@@ -78,6 +81,7 @@ namespace AccesoDatos
         {
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
+                conexion.Open();
                 string consulta = "UPDATE Planchas SET Activa = 0 WHERE PlanchaID = @PlanchaID";
                 SqlCommand cmd = new SqlCommand(consulta, conexion);
                 cmd.Parameters.AddWithValue("@PlanchaID", planchaID);
@@ -99,6 +103,7 @@ namespace AccesoDatos
         {
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
+                conexion.Open();
                 string consulta = "UPDATE Planchas SET NombrePlancha = @NombrePlancha, Logo = @Logo, Descripcion = @Descripcion, Activa = @Activa WHERE PlanchaID =@PlanchaID";
                 SqlCommand cmd = new SqlCommand( consulta, conexion);
                 cmd.Parameters.AddWithValue("@NombrePlancha" , DatosPlancha.NombrePlancha);
@@ -122,6 +127,7 @@ namespace AccesoDatos
         {
             using (SqlConnection conexion = conexionBDD.ObtenerConexion())
             {
+                conexion.Open();
                 string consulta = "DELETE FROM Planchas WHERE PlanchaID =@PlanchaID";
                 SqlCommand cmd = new SqlCommand(consulta, conexion);
                 cmd.Parameters.AddWithValue("@PlanchaID", PlanchaID);

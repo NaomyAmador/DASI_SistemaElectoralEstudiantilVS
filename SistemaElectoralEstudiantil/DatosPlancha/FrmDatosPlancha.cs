@@ -56,5 +56,11 @@ namespace SistemaElectoralEstudiantil.DatosPlancha
         {
 
         }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
     }
 }

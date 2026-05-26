@@ -64,6 +64,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.btn_Volver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -277,11 +278,11 @@
             // Lbl_Decoración9
             // 
             this.Lbl_Decoración9.AutoSize = true;
-            this.Lbl_Decoración9.Font = new System.Drawing.Font("Papillion PERSONAL USE ONLY", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Decoración9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Decoración9.ForeColor = System.Drawing.Color.Chocolate;
             this.Lbl_Decoración9.Location = new System.Drawing.Point(4, -6);
             this.Lbl_Decoración9.Name = "Lbl_Decoración9";
-            this.Lbl_Decoración9.Size = new System.Drawing.Size(681, 86);
+            this.Lbl_Decoración9.Size = new System.Drawing.Size(653, 36);
             this.Lbl_Decoración9.TabIndex = 18;
             this.Lbl_Decoración9.Text = "✰•·················•✰ Datos de Plancha ✰•·················•✰";
             // 
@@ -399,11 +400,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Papillion PERSONAL USE ONLY", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Chocolate;
             this.label6.Location = new System.Drawing.Point(460, 98);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 52);
+            this.label6.Size = new System.Drawing.Size(205, 22);
             this.label6.TabIndex = 29;
             this.label6.Text = "Candidato Seleccionado";
             // 
@@ -471,12 +472,26 @@
             this.label11.Text = "✧";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // btn_Volver
+            // 
+            this.btn_Volver.BackColor = System.Drawing.Color.Peru;
+            this.btn_Volver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Volver.ForeColor = System.Drawing.Color.White;
+            this.btn_Volver.Location = new System.Drawing.Point(521, 532);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(197, 40);
+            this.btn_Volver.TabIndex = 35;
+            this.btn_Volver.Text = "Volver al Menú";
+            this.btn_Volver.UseVisualStyleBackColor = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
             // FrmDatosPlancha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(745, 517);
+            this.ClientSize = new System.Drawing.Size(745, 595);
+            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -562,5 +577,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_Volver;
     }
 }

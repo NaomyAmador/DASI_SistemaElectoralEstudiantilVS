@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using LogicaNegocio;
+using SistemaElectoralEstudiantil.Menu;
 using SistemaElectoralEstudiantil.Principal;
 using System;
 using System.Collections.Generic;
@@ -66,7 +67,6 @@ namespace SistemaElectoralEstudiantil
         private void button1_Click(object sender, EventArgs e)
         {
             EditarDatos frm = new EditarDatos();
-
             frm.ShowDialog();
 
             CargarDatosUsuario();
@@ -83,8 +83,8 @@ namespace SistemaElectoralEstudiantil
             {
                 Sesion.UsuarioActual = null;
 
-                TempUserLogin frm =
-                    new TempUserLogin();
+                    MenuVotante frm =
+                    new MenuVotante();
 
                 frm.Show();
 
@@ -122,8 +122,8 @@ namespace SistemaElectoralEstudiantil
                         Sesion.UsuarioActual =
                             null;
 
-                        TempUserLogin frm =
-                            new TempUserLogin();
+                        MenuVotante frm =
+                            new MenuVotante();
 
                         frm.Show();
 
@@ -141,6 +141,12 @@ namespace SistemaElectoralEstudiantil
                 MessageBox.Show(
                     ex.Message);
             }
+        }
+
+        private void Btn_Volver_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
         }
     }
 }

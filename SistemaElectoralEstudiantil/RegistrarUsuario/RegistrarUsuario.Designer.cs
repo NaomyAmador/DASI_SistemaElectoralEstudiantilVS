@@ -151,7 +151,7 @@
             // 
             this.txtNombreCompleto.Font = new System.Drawing.Font("Modern No. 20", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCompleto.Location = new System.Drawing.Point(272, 196);
-            this.txtNombreCompleto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreCompleto.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
             this.txtNombreCompleto.Size = new System.Drawing.Size(183, 27);
             this.txtNombreCompleto.TabIndex = 9;
@@ -160,7 +160,7 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Modern No. 20", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(272, 235);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(183, 27);
             this.txtUsuario.TabIndex = 10;
@@ -169,7 +169,7 @@
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Modern No. 20", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(272, 273);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(183, 27);
             this.txtContraseña.TabIndex = 11;
@@ -178,7 +178,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Modern No. 20", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(272, 312);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(183, 27);
             this.txtCorreo.TabIndex = 12;
@@ -187,7 +187,7 @@
             // 
             this.txtMatricula.Font = new System.Drawing.Font("Modern No. 20", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatricula.Location = new System.Drawing.Point(272, 350);
-            this.txtMatricula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMatricula.Margin = new System.Windows.Forms.Padding(2);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(183, 27);
             this.txtMatricula.TabIndex = 13;
@@ -195,8 +195,8 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Modern No. 20", 16.125F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(124, 474);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Location = new System.Drawing.Point(84, 474);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(173, 45);
             this.btnRegistrar.TabIndex = 16;
@@ -209,7 +209,7 @@
             this.cmbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCurso.FormattingEnabled = true;
             this.cmbCurso.Location = new System.Drawing.Point(272, 388);
-            this.cmbCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCurso.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(183, 24);
             this.cmbCurso.TabIndex = 17;
@@ -219,7 +219,7 @@
             this.cmbSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeccion.FormattingEnabled = true;
             this.cmbSeccion.Location = new System.Drawing.Point(272, 423);
-            this.cmbSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbSeccion.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSeccion.Name = "cmbSeccion";
             this.cmbSeccion.Size = new System.Drawing.Size(183, 24);
             this.cmbSeccion.TabIndex = 18;
@@ -227,10 +227,10 @@
             // btn_Login
             // 
             this.btn_Login.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login.Location = new System.Drawing.Point(335, 474);
+            this.btn_Login.Location = new System.Drawing.Point(315, 474);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(173, 45);
+            this.btn_Login.Size = new System.Drawing.Size(200, 45);
             this.btn_Login.TabIndex = 19;
             this.btn_Login.Text = "Volver al Login";
             this.btn_Login.UseVisualStyleBackColor = true;
@@ -259,7 +259,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegistrarUsuario";

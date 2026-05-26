@@ -25,6 +25,8 @@ namespace SistemaElectoralEstudiantil
             //Application.Run(new CrearPlancha());
             //Application.Run(new MenuAdmin());
             Application.Run(new FrmLogin());
+            //Application.Run(new VerDatosUser());
+            //Application.Run(new FrmReporteListadoVotantes());
             //Application.Run(new MenuVotante());
             //Application.Run(new FrmReporteListadoVotantes());
         }

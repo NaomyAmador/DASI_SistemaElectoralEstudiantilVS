@@ -2,6 +2,7 @@
 using LogicaNegocio;
 using SistemaElectoralEstudiantil.DatosPlancha;
 using SistemaElectoralEstudiantil.FolderPrueba;
+using SistemaElectoralEstudiantil.Menu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,12 +68,12 @@ namespace SistemaElectoralEstudiantil.Principal
 
                 if (User.RolID == 1)
                 {
-                    FrmAdmin FrmAdmin = new FrmAdmin();
+                    MenuAdmin FrmAdmin = new MenuAdmin();
                     FrmAdmin.Show();
                 }
                 else
                 {
-                    FrmVotante FrmVotante = new FrmVotante();
+                    MenuVotante FrmVotante = new MenuVotante();
                     FrmVotante.Show();
                 }
             }

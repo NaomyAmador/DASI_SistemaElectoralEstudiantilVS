@@ -1,5 +1,7 @@
 ﻿using Entidades;
 using LogicaNegocio;
+using SistemaElectoralEstudiantil.FolderPrueba;
+using SistemaElectoralEstudiantil.Menu;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -130,7 +132,7 @@ namespace SistemaElectoralEstudiantil
             lblDescripcion.TextAlign =
                 ContentAlignment.MiddleCenter;
 
-            Button btnVotar =new Button();
+            Button btnVotar = new Button();
 
             btnVotar.Text = "Votar";
 
@@ -318,8 +320,19 @@ namespace SistemaElectoralEstudiantil
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            if (Sesion.UsuarioActual.RolID == 1)
+            {
+                FrmAdmin menuAdmin = new FrmAdmin();
+                menuAdmin.Show();
+            }
+            else
+            {
+                MenuVotante menuVotante = new MenuVotante();
+                menuVotante.Show();
+            }
+
             this.Close();
         }
+        }
     }
-}
+
